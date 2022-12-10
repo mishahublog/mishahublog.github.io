@@ -78,11 +78,11 @@ fig <- fig %>%
                                  'eraseshape',
                                  'drawarrow')) %>%
   layout(plot_bgcolor='#e5ecf6',  
-         xaxis = list(  
+         xaxis = list(showticklabels = FALSE,
            zerolinecolor = '#ffff',  
            zerolinewidth = 2,  
            gridcolor = 'ffff'),  
-         yaxis = list(  
+         yaxis = list(showticklabels = FALSE,
            zerolinecolor = '#ffff',  
            zerolinewidth = 2,  
            gridcolor = 'ffff')  
@@ -94,22 +94,28 @@ fig
 :::
 :::
 
-## Bullets
-
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
-
-## Code
-
+## Objectives of the study
 ::: r-fit-text
-Big Text
+::: incremental
+Critical Questions to address
+
+-  What are the physical factors influence column productivity and subsurface?
+- Which is more in control and immediate effect on the column productivity system of NEAS?
+- How climate change and global warming affect the NEAS system as well as the global?
+- Constraints and advances in predicting subsurface chlorophyll 
+:::
 :::
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
-```{r}
-1 + 1
-```
+## Code {auto-animate="true"}
+
+![](Ticket.png){fig-align="left"}
+
+
+## Code {auto-animate=true}
+
+![](qrwebsite.png){fig-align="left"}
+
+
+
 
