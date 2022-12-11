@@ -1,6 +1,8 @@
 ---
 title: "Biophysical"
-format: revealjs
+format: 
+   revealjs:
+      theme: default
 editor: visual
 ---
 
@@ -93,7 +95,9 @@ fig
 ```
 :::
 :::
-
+::: footer
+chapter 1
+:::
 ## Objectives of the study
 ::: r-fit-text
 ::: incremental
@@ -106,16 +110,132 @@ Critical Questions to address
 :::
 :::
 
+::: footer
+chapter 1
+:::
 
-## Code {auto-animate="true"}
+## Code 
 
-![](Ticket.png){fig-align="left"}
+![](scm_schem1.png){fig-align="center"}
+
+::: footer
+chapter 1
+:::
+
+## dfdf
+
+![](scm_schem2.png){fig-align="center"}
+
+::: footer
+chapter 1
+:::
 
 
-## Code {auto-animate=true}
+## SCM 
 
-![](qrwebsite.png){fig-align="left"}
+![](scm_schem3.png){fig-align="left"}
 
 
+::: footer
+chapter 1
+:::
+
+
+## Why SCM is Important ?
+::: columns
+::: {.column width=40%}
+::: incremental
+::: r-fit-text
+- It is a prominent feature in tropical seas.
+- Have  significant contribution in PP
+- But mostly it is underestimated  by currently using PP models.
+- A significant component varying by seasonality.
+- A probe to understand the climate change impacts
+:::
+:::
+:::
+::: {.column width=40%}
+What are the variations and its patterns?
+
+::: incremental
+::: r-fit-text
+- Strong inverse correlation between Mixed Layer Depth(MLD) and subsurface chlorophyll Maxima(SCM).
+- Atmospheric forcing  and stability of water column are important factors which drives its occurrence.
+- Phytoplankton species composition is a major factor on determining the peak magnitudes.
+- Species composition is positively correlated with PAR intensity   
+:::
+:::
+:::
+
+:::
+
+::: footer
+chapter 1
+:::
+
+## Timeline of major studies in Marine chlorophyll dynamics
+
+![](timeline.png){fig-align="left"}
+
+
+## {auto-animate=true data-background-image="observation_titile.png"}
+
+Study location, Algorithms and sampling
+
+## {auto-animate=true data-background-image="observation_titile.png"}
+
+**Observation & Methods**
+
+Study location, Algorithms and sampling
+
+## Data Sources {data-background-image="datasources_bg.png"}
+
+::: columns
+::: {.column width="30%"}
+::: incremental
+::: r-fit-text
+- Bio Argo profiles[2013-2018]
+- Insitu CTD profiles[2013-2018]
+- Wind data.
+- Aqua MODIS PAR data.
+- Aqua MODIS Fluorescence
+- Tropoflux swr
+- From experimental setups
+- Phytoplankton published Datasets
+:::
+:::
+:::
+:::
+
+##
+
+![](bioargo1.png){fig-align="left"}
+
+##
+
+![](bioargo2.png){fig-align="left"}
+
+## {data-background-image="cruisectd1.png" background-size="1390px"}
+
+## {data-background-image="cruisectd2.png" background-size="1390px"}
+
+::: columns
+::: {.column width="50%"}
+:::
+
+
+::: {.column width="50%"}
+::: incremental
+::: r-fit-text
+
+CTD spec & Probes
+
+- SBE (Model 11 PLUS, Sea-Bird Inc.) in 1 m bin intervals. 
+- The CTD system is equipped with auxiliary sensors of dissolved oxygen, fluorescence and photosynthetic active radiation (PAR)
+
+:::
+:::
+:::
+:::
 
 
