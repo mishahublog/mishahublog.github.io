@@ -114,6 +114,10 @@ Critical Questions to address
 chapter 1
 :::
 
+::: {.notes}
+speaker notes testing
+:::
+
 ## Code 
 
 ![](scm_schem1.png){fig-align="center"}
@@ -238,4 +242,78 @@ CTD spec & Probes
 :::
 :::
 
+
+## Study Location 
+
+::: columns
+::: {.column width="50%"}
+
+:::
+
+
+::: {.column width="50%"}
+
+::: incremental
+::: r-fit-text
+
+- The study region North Eastern Arabian Sea is monitored using both CTD and BioArgo
+- Season- quiescent and warm  month of Spring InterMonsoon
+- Preferred sampling from open ocean to find the innate upper ocean dynamics due to stratification
+
+
+:::
+:::
+
+:::
+:::
+
+## Algorithms & programing{data-background-image="packagesused.png" background-size="1000px"}
+
+::: columns
+::: {.column width="50%"}
+
+:::
+
+
+::: {.column width="50%"}
+
+::: incremental
+::: r-fit-text
+
+   All the Algorithms, Analytics, Automations , Empirical modeling , spatial maps, simulations and documentations are done using R programming Language 
+
+
+
+
+:::
+:::
+
+:::
+:::
+
+## Clustering and sorting SCMs according to seasons
+
+::: {.r-stack}
+![](cluster1.png){.fragment width="450" height="300"}
+
+![](cluster2.png){.fragment width="300" height="450"}
+
+![](cluster3.png){.fragment width="400" height="400"}
+
+![](cluster4.png){.fragment width="400" height="400"}
+
+![](cluster5.png){.fragment width="400" height="400"}
+
+
+:::
+
+
+
+## Fitting with Non-Linear Gaussian curves 
+
+![](profiles1.png){fig-align="center"}
+
+## Fitting with Non-Linear Gaussian curves 
+
+![](profilesfit1.png){fig-align="center"}
 
