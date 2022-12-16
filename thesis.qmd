@@ -307,6 +307,38 @@ CTD spec & Probes
 
 :::
 
+## Fitting with Non-Linear Gaussian curves
+::: columns
+::: {.column width="60%"}
+```{r fits,out.width="100%"}
+#first curvefits
+chl_argo_ctd<- read.csv("fitdata_1_inter.csv",)
+library(ggplot2)
+f<- ggplot(chl_argo_ctd,aes(-depth,value,color=Var2))+
+  coord_flip()+geom_point(aes(color= Var2))+
+  stat_smooth(size=.5, method = "loess", level = 0.95, fullrange = TRUE, se = FALSE)+
+  scale_x_continuous(name = "depth(m)")+
+  scale_y_continuous(name ="chlorophyll",position = "right")+
+  
+ # scale_y_continuous(name = expression(paste(chlorophyll,~~( mg/{m}^3))),position = "bottom")+
+ labs(colour = "stations")+
+ theme(axis.text.x = element_text(size = rel(1.2)),
+axis.text.y = element_text(size = rel(1.2)))+
+  theme_gray()+
+  theme(legend.justification = c(0.9,0.2),
+        legend.position = c(1,0),
+        legend.box.margin=margin(c(50,50,50,50)),legend.text = element_text(size = 7))
+
+library(plotly)
+ggplotly(f)
+```
+
+:::
+
+
+::: {.column width="50%"}
+:::
+:::
 
 
 ## Fitting with Non-Linear Gaussian curves 
@@ -316,4 +348,39 @@ CTD spec & Probes
 ## Fitting with Non-Linear Gaussian curves 
 
 ![](profilesfit1.png){fig-align="center"}
+
+## 
+
+![](schematicscm_gauss.png){.r-stretch}
+
+An inverted gaussian can easily represent the SCM
+
+## Rasterizing the fit values
+
+![](fitrast1.png){.r-stretch}
+
+## Rasterizing the fit values
+
+![](fitrast2.png){.r-stretch}
+
+## Surface-subsurface chlorophyll distribution and comparison
+
+![](surf-scm-rast.png){.r-stretch}
+
+## Data strategy for temporal analysis
+
+![](temporaldat1.png){.r-stretch}
+
+## Data strategy for temporal analysis
+
+![](temporaldat2.png){.r-stretch}
+
+## Data strategy for temporal analysis
+
+![](temporaldat3.png){.r-stretch}
+
+
+
+
+
 
