@@ -380,7 +380,70 @@ An inverted gaussian can easily represent the SCM
 ![](temporaldat3.png){.r-stretch}
 
 
+## {auto-animate=true data-background-image="observation_titile.png"}
 
+Understanding Process and Interactions 
+
+## {auto-animate=true data-background-image="observation_titile.png"}
+
+**Phytoplankton and Fluid dynamics**
+
+Understanding Process and Interactions 
+
+## 
+
+![](avg_profiles1.png){.r-stretch}
+
+##
+
+![](avg_profiles2.png){.r-stretch}
+
+##
+
+![](avg_profiles3.png){.r-stretch}
+
+
+
+
+
+## {data-background-image="pca_bg.png" background-size="1500px"}
+::: columns
+
+::: {.column width="50%"}
+
+
+:::
+
+::: {.column width="50%"}
+
+```{r pca3d,out.width="100%"}
+marchpca<- read.csv("Marchpcadata.csv")
+X <- data.frame(subset(marchpca, select = c(-1, -2, -3,-13, -14, -16,-15)))
+prin_comp <- prcomp(X, rank. = 3)
+
+
+components <- prin_comp[["x"]]
+components <- data.frame(components)
+components$PC2 <- -components$PC2
+components$PC3 <- -components$PC3
+components = cbind(components, marchpca$scmmodes)
+library(plotly)
+fig <- plot_ly(components, x = ~PC1, y = ~PC2, z = ~PC3, color = ~marchpca$scmmodes,
+               colors = c('red','darkgreen','blue') ) %>%
+  add_markers(size = 12)
+
+
+fig <- fig %>%
+  layout(
+    title = "tit",
+    scene = list(bgcolor = "#fff")
+  )
+
+fig
+```
+
+:::
+:::
 
 
 
