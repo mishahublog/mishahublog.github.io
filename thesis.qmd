@@ -95,18 +95,21 @@ fig
 ```
 :::
 :::
+
 ::: footer
 chapter 1
 :::
+
 ## Objectives of the study
+
 ::: r-fit-text
 ::: incremental
 Critical Questions to address
 
--  What are the physical factors influence column productivity and subsurface?
-- Which is more in control and immediate effect on the column productivity system of NEAS?
-- How climate change and global warming affect the NEAS system as well as the global?
-- Constraints and advances in predicting subsurface chlorophyll 
+-   What are the physical factors influence column productivity and subsurface?
+-   Which is more in control and immediate effect on the column productivity system of NEAS?
+-   How climate change and global warming affect the NEAS system as well as the global?
+-   Constraints and advances in predicting subsurface chlorophyll
 :::
 :::
 
@@ -114,11 +117,11 @@ Critical Questions to address
 chapter 1
 :::
 
-::: {.notes}
+::: notes
 speaker notes testing
 :::
 
-## Code 
+## Code
 
 ![](scm_schem1.png){fig-align="center"}
 
@@ -134,43 +137,41 @@ chapter 1
 chapter 1
 :::
 
-
-## SCM 
+## SCM
 
 ![](scm_schem3.png){fig-align="left"}
-
 
 ::: footer
 chapter 1
 :::
 
-
 ## Why SCM is Important ?
+
 ::: columns
-::: {.column width=40%}
+::: {.column width="40%"}
 ::: incremental
 ::: r-fit-text
-- It is a prominent feature in tropical seas.
-- Have  significant contribution in PP
-- But mostly it is underestimated  by currently using PP models.
-- A significant component varying by seasonality.
-- A probe to understand the climate change impacts
+-   It is a prominent feature in tropical seas.
+-   Have significant contribution in PP
+-   But mostly it is underestimated by currently using PP models.
+-   A significant component varying by seasonality.
+-   A probe to understand the climate change impacts
 :::
 :::
 :::
-::: {.column width=40%}
+
+::: {.column width="40%"}
 What are the variations and its patterns?
 
 ::: incremental
 ::: r-fit-text
-- Strong inverse correlation between Mixed Layer Depth(MLD) and subsurface chlorophyll Maxima(SCM).
-- Atmospheric forcing  and stability of water column are important factors which drives its occurrence.
-- Phytoplankton species composition is a major factor on determining the peak magnitudes.
-- Species composition is positively correlated with PAR intensity   
+-   Strong inverse correlation between Mixed Layer Depth(MLD) and subsurface chlorophyll Maxima(SCM).
+-   Atmospheric forcing and stability of water column are important factors which drives its occurrence.
+-   Phytoplankton species composition is a major factor on determining the peak magnitudes.
+-   Species composition is positively correlated with PAR intensity\
 :::
 :::
 :::
-
 :::
 
 ::: footer
@@ -181,12 +182,11 @@ chapter 1
 
 ![](timeline.png){fig-align="left"}
 
-
-## {auto-animate=true data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="observation_titile.png"}
 
 Study location, Algorithms and sampling
 
-## {auto-animate=true data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="observation_titile.png"}
 
 **Observation & Methods**
 
@@ -198,102 +198,82 @@ Study location, Algorithms and sampling
 ::: {.column width="30%"}
 ::: incremental
 ::: r-fit-text
-- Bio Argo profiles[2013-2018]
-- Insitu CTD profiles[2013-2018]
-- Wind data.
-- Aqua MODIS PAR data.
-- Aqua MODIS Fluorescence
-- Tropoflux swr
-- From experimental setups
-- Phytoplankton published Datasets
+-   Bio Argo profiles\[2013-2018\]
+-   Insitu CTD profiles\[2013-2018\]
+-   Wind data.
+-   Aqua MODIS PAR data.
+-   Aqua MODIS Fluorescence
+-   Tropoflux swr
+-   From experimental setups
+-   Phytoplankton published Datasets
 :::
 :::
 :::
 :::
 
-##
+## 
 
 ![](bioargo1.png){fig-align="left"}
 
-##
+## 
 
 ![](bioargo2.png){fig-align="left"}
 
-## {data-background-image="cruisectd1.png" background-size="1390px"}
+##  {data-background-image="cruisectd1.png" background-size="1390px"}
 
-## {data-background-image="cruisectd2.png" background-size="1390px"}
+##  {data-background-image="cruisectd2.png" background-size="1390px"}
 
 ::: columns
 ::: {.column width="50%"}
 :::
 
-
 ::: {.column width="50%"}
 ::: incremental
 ::: r-fit-text
-
 CTD spec & Probes
 
-- SBE (Model 11 PLUS, Sea-Bird Inc.) in 1 m bin intervals. 
-- The CTD system is equipped with auxiliary sensors of dissolved oxygen, fluorescence and photosynthetic active radiation (PAR)
-
+-   SBE (Model 11 PLUS, Sea-Bird Inc.) in 1 m bin intervals.
+-   The CTD system is equipped with auxiliary sensors of dissolved oxygen, fluorescence and photosynthetic active radiation (PAR)
 :::
 :::
 :::
 :::
 
-
-## Study Location 
+## Study Location
 
 ::: columns
 ::: {.column width="50%"}
-
 :::
-
 
 ::: {.column width="50%"}
-
 ::: incremental
 ::: r-fit-text
-
-- The study region North Eastern Arabian Sea is monitored using both CTD and BioArgo
-- Season- quiescent and warm  month of Spring InterMonsoon
-- Preferred sampling from open ocean to find the innate upper ocean dynamics due to stratification
-
-
+-   The study region North Eastern Arabian Sea is monitored using both CTD and BioArgo
+-   Season- quiescent and warm month of Spring InterMonsoon
+-   Preferred sampling from open ocean to find the innate upper ocean dynamics due to stratification
+:::
+:::
 :::
 :::
 
-:::
-:::
-
-## Algorithms & programing{data-background-image="packagesused.png" background-size="1000px"}
+## Algorithms & programing {data-background-image="packagesused.png" background-size="1000px"}
 
 ::: columns
 ::: {.column width="50%"}
-
 :::
-
 
 ::: {.column width="50%"}
-
 ::: incremental
 ::: r-fit-text
-
-   All the Algorithms, Analytics, Automations , Empirical modeling , spatial maps, simulations and documentations are done using R programming Language 
-
-
-
-
+All the Algorithms, Analytics, Automations , Empirical modeling , spatial maps, simulations and documentations are done using R programming Language
 :::
 :::
-
 :::
 :::
 
 ## Clustering and sorting SCMs according to seasons
 
-::: {.r-stack}
+::: r-stack
 ![](cluster1.png){.fragment width="450" height="300"}
 
 ![](cluster2.png){.fragment width="300" height="450"}
@@ -303,11 +283,10 @@ CTD spec & Probes
 ![](cluster4.png){.fragment width="400" height="400"}
 
 ![](cluster5.png){.fragment width="400" height="400"}
-
-
 :::
 
 ## Fitting with Non-Linear Gaussian curves
+
 ::: columns
 ::: {.column width="60%"}
 ```{r fits,out.width="100%"}
@@ -332,20 +311,17 @@ axis.text.y = element_text(size = rel(1.2)))+
 library(plotly)
 ggplotly(f)
 ```
-
 :::
-
 
 ::: {.column width="50%"}
 :::
 :::
 
-
-## Fitting with Non-Linear Gaussian curves 
+## Fitting with Non-Linear Gaussian curves
 
 ![](profiles1.png){fig-align="center"}
 
-## Fitting with Non-Linear Gaussian curves 
+## Fitting with Non-Linear Gaussian curves
 
 ![](profilesfit1.png){fig-align="center"}
 
@@ -379,43 +355,35 @@ An inverted gaussian can easily represent the SCM
 
 ![](temporaldat3.png){.r-stretch}
 
+##  {auto-animate="true" data-background-image="observation_titile.png"}
 
-## {auto-animate=true data-background-image="observation_titile.png"}
+Understanding Process and Interactions
 
-Understanding Process and Interactions 
-
-## {auto-animate=true data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="observation_titile.png"}
 
 **Phytoplankton and Fluid dynamics**
 
-Understanding Process and Interactions 
+Understanding Process and Interactions
 
 ## 
 
 ![](avg_profiles1.png){.r-stretch}
 
-##
+## 
 
 ![](avg_profiles2.png){.r-stretch}
 
-##
+## 
 
 ![](avg_profiles3.png){.r-stretch}
 
+##  {data-background-image="pca_bg.png" background-size="1500px"}
 
-
-
-
-## {data-background-image="pca_bg.png" background-size="1500px"}
 ::: columns
-
 ::: {.column width="50%"}
-
-
 :::
 
 ::: {.column width="50%"}
-
 ```{r pca3d,out.width="100%"}
 marchpca<- read.csv("Marchpcadata.csv")
 X <- data.frame(subset(marchpca, select = c(-1, -2, -3,-13, -14, -16,-15)))
@@ -441,9 +409,215 @@ fig <- fig %>%
 
 fig
 ```
-
 :::
 :::
 
+## par {data-background-image="par-3d-bg1.png" background-size="1500px"}
+
+::: columns
+::: {.column width="50%"}
+:::
+
+::: {.column width="50%"}
+::: incremental
+**Seasonality of PAR on SCM**
+
+-   Seasonality of PAR affects surface chlorophyll
+-   But SCM didn't have much effects on PAR
+-   The PAR have a stable exponential decay at subsurface
+:::
+:::
+:::
+
+## par {data-background-image="par-3d-bg2.png" background-size="1500px"}
+
+::: columns
+::: {.column width="50%"}
+:::
+
+::: {.column width="50%"}
+**Seasonality of PAR on SCM**
+
+-   Seasonality of PAR affects surface chlorophyll
+-   But SCM didn't have much effects on PAR
+-   The PAR have a stable exponential decay at subsurface
+:::
+:::
+
+:::
+
+## How Fluid density drives the chlorophyll?
+
+```{r}
+#read data
+multregdata<- read.csv("multireg3d.csv")
+# x, y, z variables
+x <- multregdata$sigma
+y <-multregdata$par
+z <- multregdata$chl
+# Compute the linear regression (z = ax + by + d)
+fit <- lm(z ~ x + y)
+# predict values on regular xy grid
+grid.lines = 26
+x.pred <- seq(min(x), max(x), length.out = grid.lines)
+y.pred <- seq(min(y), max(y), length.out = grid.lines)
+xy <- expand.grid( x = x.pred, y = y.pred)
+z.pred <- matrix(predict(fit, newdata = xy), 
+                 nrow = grid.lines, ncol = grid.lines)
+# fitted points for droplines to surface
+fitpoints <- predict(fit)
+# scatter plot with regression plane
+#tiff("multireg.tiff",width = 20,height = 20,units = 'cm',res = 300)
+#library(plot3D)
+#test
+ library(colorRamps)
+ cols <- c("pink", "purple")
+ cols <- cols[z+1] 
+ library(plotly)
+ plot_ly(x=~x.pred, y=~y.pred, z=~z.pred, 
+         colorbar = list(title = "Fitted \n Chlorophyll"),
+         colors = 
+           c("pink","purple"),
+         type="surface") %>%
+   add_trace( x=x, y=y, z=z, mode="markers", type="scatter3d",
+             # text=c("Density","PAR","chlor"),
+              marker= list(
+                color = cols,
+                size = 10,
+                line = list(
+                  color = 'black',
+                  width = 12),hoverinfo="text"
+                  ))%>%
+   layout(scene = list(
+     aspectmode = "manual", aspectratio = list(x=1, y=1, z=1),
+     xaxis = list(title = "Fluid density"),
+     yaxis = list(title = "PAR"),
+     zaxis = list(title = "Chlorophyll")))
+ 
+```
+
+## Fluid Simulations on 10 most abundant species
+
+::: columns
+::: {.column width="50%"}
+::: {.r-fit-text}
+Four species were more focused due to its abundance in this location
+
+::: incremental
+1)  *Noctiluca scintillans*
+2)  *Guinardia striata*
+3)  *Thalassiothrix longissima*
+4)  *Nitzschia longissima*
+:::
+:::
+:::
+
+::: {.column width="50%"}
+![](species.png)
+:::
+:::
+
+## Stable stratified conditions favours settling of phytoplankton
+
+::: columns
+::: {.column width="40%"}
+::: incremental
+::: r-fit-text
+-   In stable sea conditions (March/spring) particle sinking or phytoplankton settlement can be well explained by Stokes Theorem
+-   Phytoplankton maintains the buoyancy by its innate mechanisms of gas vacuoles and lipids and often are heavier than seawater
+-   The density of phytoplankton depends on the volume rather than mass which depends on respiration and photosynthesis
+-   This disproportion in mass and volume makes the phytoplankton (especially diatoms) positively buoyant after a critical size range (Gross and Zeuthen, 1948)
+:::
+:::
+:::
+
+::: {.column width="50%"}
+![](settling equation.png)
+:::
+:::
+
+## Density-settling velocity relationships very strong in March
+
+![](bv_set1.png){.r-stretch}
+
+## Density-settling velocity relationships very strong in March
+
+![](bv_set2.png){.r-stretch}
 
 
+##  {auto-animate="true" data-background-image="observation_titile.png"}
+
+Vertical Simulation of Noctiluca in North eastern Arabian Sea 
+
+##  {auto-animate="true" data-background-image="observation_titile.png"}
+
+**Physical processes associated with Green Noctiluca Blooms**
+
+Vertical Simulation of Noctiluca in North eastern Arabian Sea 
+
+## Changes in Bloom dynamics
+::: columns
+::: {.column width="40%"}
+::: incremental
+::: {.r-fit-text}
+-  Blooms have positive relations with hot weather
+-  The current warming scenario in NEAS is not  different , and shows increasing yearly.
+-  The NEAS system shows a significant  community shift (Diatom to Dinoflagellate) from the year 2000
+-  The addition of mixotrophic dinoflagellate to system enables early blooms and enhance the productivity in the location
+:::
+:::
+:::
+
+::: {.column width="60%"}
+![](bloom_map1.png){.r-stretch}
+:::
+:::
+
+## When it happenes actually
+
+![](bloom_map2.png){.r-stretch}
+
+## When it happenes actually
+
+![](bloom_map3.png){.r-stretch}
+
+## When it happenes actually
+
+![](bloom_map4.png){.r-stretch}
+
+## When it happenes actually
+
+![](bloom_map5.png){.r-stretch}
+
+## The role of surface currents 
+
+
+::: columns
+::: {.column width="70%"}
+
+![](eot_surfacecurrent.png)
+
+:::
+
+::: {.column width="30%"}
+:::{.r-fit-text}
+The observations found that, surface currents have influence in lifting phytoplankton groups to surface waters. This is well evident from Empirical Orthogonal Teleconnections.
+:::
+:::
+:::
+
+## Emergence of Green *Noctiluca* blooms
+
+![](noct_bloom1.png)
+
+## Emergence of Green *Noctiluca* blooms
+
+![](noct_bloom2.png)
+
+## Emergence of Green *Noctiluca* blooms
+
+![](noct_bloom3.png)
+
+## Emergence of Green *Noctiluca* blooms
+
+![](noct_bloom4.png)
