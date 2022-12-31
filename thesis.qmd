@@ -500,7 +500,7 @@ fitpoints <- predict(fit)
 
 ::: columns
 ::: {.column width="50%"}
-::: {.r-fit-text}
+::: r-fit-text
 Four species were more focused due to its abundance in this location
 
 ::: incremental
@@ -532,7 +532,7 @@ Four species were more focused due to its abundance in this location
 :::
 
 ::: {.column width="50%"}
-![](settling equation.png)
+![](settling%20equation.png)
 :::
 :::
 
@@ -544,26 +544,26 @@ Four species were more focused due to its abundance in this location
 
 ![](bv_set2.png){.r-stretch}
 
-
 ##  {auto-animate="true" data-background-image="observation_titile.png"}
 
-Vertical Simulation of Noctiluca in North eastern Arabian Sea 
+Vertical Simulation of Noctiluca in North eastern Arabian Sea
 
 ##  {auto-animate="true" data-background-image="observation_titile.png"}
 
 **Physical processes associated with Green Noctiluca Blooms**
 
-Vertical Simulation of Noctiluca in North eastern Arabian Sea 
+Vertical Simulation of Noctiluca in North eastern Arabian Sea
 
 ## Changes in Bloom dynamics
+
 ::: columns
 ::: {.column width="40%"}
 ::: incremental
-::: {.r-fit-text}
--  Blooms have positive relations with hot weather
--  The current warming scenario in NEAS is not  different , and shows increasing yearly.
--  The NEAS system shows a significant  community shift (Diatom to Dinoflagellate) from the year 2000
--  The addition of mixotrophic dinoflagellate to system enables early blooms and enhance the productivity in the location
+::: r-fit-text
+-   Blooms have positive relations with hot weather
+-   The current warming scenario in NEAS is not different , and shows increasing yearly.
+-   The NEAS system shows a significant community shift (Diatom to Dinoflagellate) from the year 2000
+-   The addition of mixotrophic dinoflagellate to system enables early blooms and enhance the productivity in the location
 :::
 :::
 :::
@@ -589,35 +589,250 @@ Vertical Simulation of Noctiluca in North eastern Arabian Sea
 
 ![](bloom_map5.png){.r-stretch}
 
-## The role of surface currents 
-
+## The role of surface currents
 
 ::: columns
 ::: {.column width="70%"}
-
 ![](eot_surfacecurrent.png)
-
 :::
 
 ::: {.column width="30%"}
-:::{.r-fit-text}
+::: r-fit-text
 The observations found that, surface currents have influence in lifting phytoplankton groups to surface waters. This is well evident from Empirical Orthogonal Teleconnections.
 :::
 :::
 :::
 
-## Emergence of Green *Noctiluca* blooms
+## Spatial signatures of Chl*-a*
 
-![](noct_bloom1.png)
+![](pixel_stat.tiff)
 
-## Emergence of Green *Noctiluca* blooms
+## 
 
-![](noct_bloom2.png)
+![](hovmull_3var1.png)
 
-## Emergence of Green *Noctiluca* blooms
+## 
 
-![](noct_bloom3.png)
+![](hovmull_3var2.png)
 
-## Emergence of Green *Noctiluca* blooms
 
-![](noct_bloom4.png)
+
+##  {data-background-image="lv_model.png" background-size="1300px"}
+
+Trophic dynamics of SubSurface layers
+
+::: columns
+::: {.column width="30%"}
+::: r-fit-text
+::: incremental
+-   The LVM models suggest that the Trophic dynamics are efficient in energy transfer
+
+-   The nutrient dynamics on the subsurface are stable
+
+-   The temperature and light factors are optimum
+
+-   The subsurface blooms can be expected more frequent in future warming scenarios
+:::
+:::
+:::
+
+::: {.column width="0%"}
+:::
+:::
+
+##  {auto-animate="true" data-background-image="observation_titile.png"}
+
+Global density changes, settling velocities and time shifts in blooms
+
+##  {auto-animate="true" data-background-image="observation_titile.png"}
+
+**Phytoplankton response to climate change**
+
+Global density changes, settling velocities and time shifts in blooms
+
+## 
+
+```{r, out.width="100%",out.height="100%"}
+
+ggweekdata<- read.csv("ts_sst_data_weeks.csv")
+df <- ggweekdata
+df$year <- as.factor(df$year)
+
+library(dplyr)
+df.summary2 <- df %>%
+  group_by(year, weeks) %>%
+  summarise(
+    sd = sd(Temperature),
+    Temperature = mean(Temperature)
+  )
+
+p<- ggplot(df, aes(year, Temperature, color = weeks)) +
+  geom_jitter(position = position_jitter(0.2)) + 
+  geom_line(aes(group = weeks),data = df.summary2) +
+  geom_errorbar(aes(ymin = Temperature-sd, ymax = Temperature+sd),
+                data = df.summary2, width = 0.2)
+
+ library(plotly)
+
+ggplotly(p)
+
+```
+
+SST variations in decadel scale over four weeks of March
+
+##  
+
+SCM strengthen and warming seasons on various years
+
+::: columns
+::: {.column width="50%"}
+
+![](warm_scm.png)
+
+:::
+
+::: {.column width="50%"}
+
+```{r, out.width="100%"}
+marchpca<- read.csv("marchpca.csv")
+library(ggplot2)
+c<- ggplot(marchpca,aes(Temp.surf,sigma.scm))+geom_point()+geom_smooth(method = "lm")
+library(plotly)
+ggplotly(c)
+```
+
+
+:::
+:::
+
+##  
+
+SCM strengthen and warming seasons on various years
+
+::: columns
+
+::: {.column width="40%"}
+
+::: r-fit-text
+::: incremental
+
+
+:::
+:::
+
+
+:::
+
+
+::: {.column width="60%"}
+
+![](Noct_coord.png)
+
+:::
+:::
+
+## 
+
+::: columns
+
+::: {.column width="100%"}
+
+```{r out.width=="40%",}
+ts_neas_dat<- read.csv("sigma_neas.csv")
+ts_neas_dat$date<- as.Date(ts_neas_dat$date)
+library(ggplot2)
+
+ts_neas<- ggplot(ts_neas_dat, aes(x = date, y = den,group=1)) + geom_line(size=1)+geom_smooth()
+
+
+library(plotly)
+ggplotly(ts_neas)
+
+
+```
+
+:::
+
+
+::: {.column width="40%"}
+
+::: r-fit-text
+::: incremental
+
+
+:::
+:::
+:::
+:::
+
+
+## 
+
+
+
+## {auto-animate=true}
+
+::: {style="margin-top: 100px;"}
+Early occurrence of Phytoplankton blooms in NEAS ?
+:::
+
+## {auto-animate=true}
+
+::: {style="margin-top: 200px; font-size: 3em; color: blue ;"}
+Early occurrence of Phytoplankton blooms in NEAS ?
+:::
+
+
+
+## 
+::: columns
+
+::: {.column width="50%"}
+
+::: r-stack
+
+![](feb10wav.png){.fragment width="600" height="600"} 
+
+![](feb15wav.png){.fragment width="600" height="600" }
+
+![](feb20wav.png){.fragment width="600" height="600"}
+
+![](feb25wav.png){.fragment width="600" height="600"}
+
+![](mar1wave.png){.fragment width="600" height="600"}
+
+![](mar06wav.png){.fragment width="600" height="600"}
+
+![](mar11wav.png){.fragment width="600" height="600"}
+
+![](mar16wav.png){.fragment width="600" height="600"}
+
+![](mar21wav.png){.fragment width="600" height="600"}
+
+![](mar26wav.png){.fragment width="600" height="600"}
+
+::: 
+
+:::
+
+
+::: {.column width="50%"}
+
+::: r-fit-text
+::: incremental
+
+-  The chlorophyll values were high(blooms) only during March in the earlier days 
+-  However, the onset of blooming is observed to be early in the recent years 
+-  The Month of February and March is very critical for blooms, due to the withdrawal of convective mixing and initiation of stratification during the period
+-  As reflected in the changes in density, it is concluded that the early blooming is due to the early stratification 
+
+
+:::
+:::
+:::
+:::
+
+
+
+
+

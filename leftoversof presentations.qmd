@@ -1,0 +1,95 @@
+## Emergence of Green *Noctiluca* blooms
+
+![](noct_bloom1.png)
+
+## Emergence of Green *Noctiluca* blooms
+
+![](noct_bloom2.png)
+
+## Emergence of Green *Noctiluca* blooms
+
+![](noct_bloom3.png)
+
+## Emergence of Green *Noctiluca* blooms
+
+![](noct_bloom4.png)
+
+## Monitoring effects of stratification
+
+**2013-2014**
+  
+  ![](blooms_2013_2014.png){.absolute width="1800" height="450"}
+
+## Monitoring effects of stratification
+
+**2014-2015**
+  
+  ![](blooms_2014_2015.png){.absolute width="1800" height="450"}
+
+## Monitoring effects of stratification
+
+**2015-2016**
+  
+  ![](blooms_2015_2016.png){.absolute width="1800" height="450"}
+
+## Monitoring effects of stratification
+
+**2016-2017**
+  
+  ![](blooms_2016_2017.png){.absolute width="1800" height="450"}
+
+## Monitoring effects of stratification
+
+**2016-2017**
+  
+  ![](blooms_2016_2017.png){.absolute width="1800" height="450"}
+
+## Monitoring effects of stratification
+
+**2017-2018**
+  
+  ![](blooms_2017_2018.png){.absolute width="1800" height="450"}
+
+## Sampling BioArgo from 2013 to 2018, monitoring effects of stratification
+
+![](chl_overview.png)
+
+## Sigma-t (Potential density ) variations between 2013-2018
+
+::: r-stack
+![](sig1314.png){.fragment}
+
+![](sig1415.png){.fragment}
+
+![](sig1516.png){.fragment}
+
+![](sig1617.png){.fragment}
+
+![](sig1718.png){.fragment}
+:::
+  
+  ## test
+  
+  ::: r-stack
+![](set1314.png){.fragment}
+
+![](set1415.png){.fragment}
+
+![](set1516.png){.fragment}
+
+![](set1617.png){.fragment}
+
+![](set1718.png){.fragment}
+:::
+  
+  ## Dyanmics of Sigma-t and Settling velocity over time
+  
+  ::: columns
+::: {.column width="50%"}
+![](sigma_bar.png)
+:::
+  
+  ::: {.column width="50%"}
+![](set_bar.png)
+:::
+  :::
