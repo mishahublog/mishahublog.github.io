@@ -2,6 +2,7 @@
 title: "Biophysical"
 format: 
    revealjs:
+      chalkboard: true
       theme: default
 editor: visual
 ---
@@ -607,6 +608,10 @@ The observations found that, surface currents have influence in lifting phytopla
 
 ![](pixel_stat.tiff)
 
+## Wind 
+
+![](windrose.png) {.r-stretch}
+
 ## 
 
 ![](hovmull_3var1.png)
@@ -788,9 +793,7 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 ::: columns
 
 ::: {.column width="50%"}
-
 ::: r-stack
-
 ![](feb10wav.png){.fragment width="600" height="600"} 
 
 ![](feb15wav.png){.fragment width="600" height="600" }
@@ -819,7 +822,6 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 ::: {.column width="50%"}
 
 ::: r-fit-text
-::: incremental
 
 -  The chlorophyll values were high(blooms) only during March in the earlier days 
 -  However, the onset of blooming is observed to be early in the recent years 
@@ -827,12 +829,196 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 -  As reflected in the changes in density, it is concluded that the early blooming is due to the early stratification 
 
 
+
+:::
+:::
+:::
+
+
+## wavelet decomposs
+
+::: columns
+
+::: {.column width="60%"}
+
+![](wave_decompose.png)
+
+:::
+
+
+::: {.column width="40%"}
+
+::: r-fit-text
+::: incremental
+
+
 :::
 :::
 :::
 :::
 
+## wavelet decomposs
+
+::: columns
+
+::: {.column width="60%"}
+
+![](wave_decompose_sig.png)
+
+
+:::
+
+
+::: {.column width="40%"}
 
 
 
+:::
+:::
 
+## Wavelet Coherence: pycnocline depths vs surface chlorophyll
+
+::: {.r-stretch}
+
+![](pycnocline depths vs surface chlorophyll.png) 
+
+:::
+
+## Wavelet Coherence: pycnocline vs SCM
+
+::: {.r-stretch}
+
+![](pycnocline vs SCM.png) 
+
+:::
+
+## 
+
+::: r-stack
+
+![](pden1.png){.fragment}
+
+![](pden2.png){.fragment}
+
+![](pden3.png){.fragment}
+
+![](pden4.png){.fragment}
+
+:::
+
+##
+
+```{r}
+library(ggplot2)
+library(plotly)
+Allyear_ano_pden_ts<- read.csv("ensodat.csv")
+enso<- ggplot(Allyear_ano_pden_ts, aes(x = year, y = value,group=1)) +
+  geom_col(aes(fill=ext_events))+ stat_smooth(aes(year,value))+ labs(fill = "ENSO")+
+  ylab("potential density anomaly") +theme(axis.text.x = element_text(angle = 90, size = 14, colour = "black", vjust = 0.5, hjust = 1, face= "bold"),
+                                            axis.title.x = element_text(size = 14, face = "bold"),
+                                            axis.text.y = element_text(colour = "black", size = 14, face = "bold"),
+                                            legend.text = element_text(size = 12, face = "bold", colour = "black"),
+                                            axis.title.y = element_text(size = 14, face = "bold"), legend.title = element_text(size = 12, face = "bold"))
+
+ggplotly(enso)
+```
+
+##
+
+```{r}
+sourcedata<- read.csv("sstpden.csv")
+library(ggplot2)
+library(plotly)
+pdensst<- ggplot(sourcedata,aes(sig_temp,scm_depth))+geom_point() + 
+  geom_smooth(method = "lm", se=FALSE) + xlab("SST-Potential Density Ratio")+
+  ylab("SCM Depth (m)")
+ggplotly(pdensst)
+
+```
+
+## global bisi
+
+
+
+##
+
+##  {auto-animate="true" data-background-image="observation_titile.png"}
+
+Limitations, possibilities  and Applications 
+
+##  {auto-animate="true" data-background-image="observation_titile.png"}
+
+**Forecasting submerged Chlorophyll with Machine Learning**
+
+Limitations, possibilities  and Applications 
+
+##
+
+::: columns
+
+::: {.column width="50%"}
+
+![](model_simu.png)
+
+:::
+
+
+::: {.column width="50%"}
+
+![](sensitivity.png)
+
+
+:::
+:::
+
+##
+
+::: columns
+
+::: {.column width="50%"}
+
+```{r out.width="80%"}
+data_bloom<- read.csv("chl_phys.csv")
+
+library(ggplot2)
+library(plotly)
+library(mgcv)
+chlphys<- ggplot(data_bloom, aes(phys, chl) ) +
+  geom_point() +
+  stat_smooth(method = gam, formula = y ~ s(x))
+
+ggplotly(chlphys)
+```
+
+:::
+
+
+::: {.column width="50%"}
+
+
+
+:::
+:::
+
+##
+
+::: columns
+
+::: {.column width="50%"}
+
+![](pca_surf.png)
+
+:::
+
+
+::: {.column width="50%"}
+
+![](pca_scm.png)
+
+
+:::
+:::
+
+##
+
+![](neuralnet.png){.r-stretch}
