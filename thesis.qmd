@@ -5,6 +5,8 @@ format:
       chalkboard: true
       theme: default
 editor: visual
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ## Background
@@ -228,10 +230,7 @@ Study location, Algorithms and sampling
 ::: {.column width="50%"}
 :::
 
-
 ::: {.column width="50%"}
-
-
 ::: r-fit-text
 CTD spec & Probes
 
@@ -245,9 +244,7 @@ CTD spec & Probes
 
 ::: columns
 ::: {.column width="70%"}
-
 ![](locationmap.png)
-
 :::
 
 ::: {.column width="30%"}
@@ -427,9 +424,11 @@ fig
 ::: incremental
 **Seasonality of PAR on SCM**
 
+::: r-fit-text
 -   Seasonality of PAR affects surface chlorophyll
 -   But SCM didn't have much effects on PAR
 -   The PAR have a stable exponential decay at subsurface
+:::
 :::
 :::
 :::
@@ -549,15 +548,15 @@ Four species were more focused due to its abundance in this location
 
 ![](bv_set2.png){.r-stretch}
 
-##  {auto-animate="true" data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="chapter4.png"}
 
-Vertical Simulation of Noctiluca in North eastern Arabian Sea
+Physical processes associated with Green Noctiluca Blooms
 
-##  {auto-animate="true" data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="chapter4.png"}
 
-**Physical processes associated with Green Noctiluca Blooms**
+**Surface-Subsurface oscillations of Chlorophyll-*a***
 
-Vertical Simulation of Noctiluca in North eastern Arabian Sea
+Physical processes associated with Green Noctiluca Blooms
 
 ## Changes in Bloom dynamics
 
@@ -578,21 +577,21 @@ Vertical Simulation of Noctiluca in North eastern Arabian Sea
 :::
 :::
 
-## When it happenes actually
+## How blooms changes in NEAS
 
-![](bloom_map2.png){.r-stretch}
-
-## When it happenes actually
-
-![](bloom_map3.png){.r-stretch}
+![](bloom_map2.png){.absolute top="100" left="50"}
 
 ## When it happenes actually
 
-![](bloom_map4.png){.r-stretch}
+![](bloom_map3.png){.absolute top="100" left="50"}
 
 ## When it happenes actually
 
-![](bloom_map5.png){.r-stretch}
+![](bloom_map4.png){.absolute top="100" left="50"}
+
+## When it happenes actually
+
+![](bloom_map5.png){.absolute top="100" left="50"}
 
 ## The role of surface currents
 
@@ -612,7 +611,7 @@ The observations found that, surface currents have influence in lifting phytopla
 
 ![](pixel_stat.tiff)
 
-## Wind 
+## Wind
 
 ![](windrose.png) {.r-stretch}
 
@@ -623,8 +622,6 @@ The observations found that, surface currents have influence in lifting phytopla
 ## 
 
 ![](hovmull_3var2.png)
-
-
 
 ##  {data-background-image="lv_model.png" background-size="1300px"}
 
@@ -689,19 +686,16 @@ ggplotly(p)
 
 SST variations in decadel scale over four weeks of March
 
-##  
+## 
 
 SCM strengthen and warming seasons on various years
 
 ::: columns
 ::: {.column width="50%"}
-
 ![](warm_scm.png)
-
 :::
 
 ::: {.column width="50%"}
-
 ```{r, out.width="100%"}
 marchpca<- read.csv("marchpca.csv")
 library(ggplot2)
@@ -709,43 +703,35 @@ c<- ggplot(marchpca,aes(Temp.surf,sigma.scm))+geom_point()+geom_smooth(method = 
 library(plotly)
 ggplotly(c)
 ```
-
-
 :::
 :::
 
-##  
+## 
 
 SCM strengthen and warming seasons on various years
 
 ::: columns
-
 ::: {.column width="40%"}
-
 ::: r-fit-text
 ::: incremental
+-   Warming -Stratification links to Noctiluca are well reflected in spatial distributions
 
+-   The Northern Hemisphere seems to be subjected to more than south
 
+-   The Land locked areas are more prone to the occurrence of *Noctiluca* blooms due to nutrient availability and efficient stratification
 :::
 :::
-
-
 :::
-
 
 ::: {.column width="60%"}
-
 ![](Noct_coord.png)
-
 :::
 :::
 
 ## 
 
 ::: columns
-
 ::: {.column width="100%"}
-
 ```{r out.width=="40%",}
 ts_neas_dat<- read.csv("sigma_neas.csv")
 ts_neas_dat$date<- as.Date(ts_neas_dat$date)
@@ -759,48 +745,39 @@ ggplotly(ts_neas)
 
 
 ```
-
 :::
-
 
 ::: {.column width="40%"}
-
 ::: r-fit-text
 ::: incremental
-
-
+decreasing variability over years
 :::
 :::
 :::
 :::
-
 
 ## 
 
-
-
-## {auto-animate=true}
+##  {auto-animate="true"}
 
 ::: {style="margin-top: 100px;"}
 Early occurrence of Phytoplankton blooms in NEAS ?
 :::
 
-## {auto-animate=true}
+##  {auto-animate="true"}
 
 ::: {style="margin-top: 200px; font-size: 3em; color: blue ;"}
 Early occurrence of Phytoplankton blooms in NEAS ?
 :::
 
-
-
 ## 
-::: columns
 
+::: columns
 ::: {.column width="50%"}
 ::: r-stack
-![](feb10wav.png){.fragment width="600" height="600"} 
+![](feb10wav.png){.fragment width="600" height="600"}
 
-![](feb15wav.png){.fragment width="600" height="600" }
+![](feb15wav.png){.fragment width="600" height="600"}
 
 ![](feb20wav.png){.fragment width="600" height="600"}
 
@@ -817,45 +794,29 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 ![](mar21wav.png){.fragment width="600" height="600"}
 
 ![](mar26wav.png){.fragment width="600" height="600"}
-
-::: 
-
 :::
-
+:::
 
 ::: {.column width="50%"}
-
 ::: r-fit-text
-
--  The chlorophyll values were high(blooms) only during March in the earlier days 
--  However, the onset of blooming is observed to be early in the recent years 
--  The Month of February and March is very critical for blooms, due to the withdrawal of convective mixing and initiation of stratification during the period
--  As reflected in the changes in density, it is concluded that the early blooming is due to the early stratification 
-
-
-
+-   The chlorophyll values were high(blooms) only during March in the earlier days
+-   However, the onset of blooming is observed to be early in the recent years
+-   The Month of February and March is very critical for blooms, due to the withdrawal of convective mixing and initiation of stratification during the period
+-   As reflected in the changes in density, it is concluded that the early blooming is due to the early stratification
 :::
 :::
 :::
-
 
 ## wavelet decomposs
 
 ::: columns
-
 ::: {.column width="60%"}
-
 ![](wave_decompose.png)
-
 :::
 
-
 ::: {.column width="40%"}
-
 ::: r-fit-text
 ::: incremental
-
-
 :::
 :::
 :::
@@ -864,42 +825,29 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 ## wavelet decomposs
 
 ::: columns
-
 ::: {.column width="60%"}
-
 ![](wave_decompose_sig.png)
-
-
 :::
 
-
 ::: {.column width="40%"}
-
-
-
 :::
 :::
 
 ## Wavelet Coherence: pycnocline depths vs surface chlorophyll
 
-::: {.r-stretch}
-
-![](pycnocline depths vs surface chlorophyll.png) 
-
+::: r-stretch
+![](pycnocline%20depths%20vs%20surface%20chlorophyll.png)
 :::
 
 ## Wavelet Coherence: pycnocline vs SCM
 
-::: {.r-stretch}
-
-![](pycnocline vs SCM.png) 
-
+::: r-stretch
+![](pycnocline%20vs%20SCM.png)
 :::
 
 ## 
 
 ::: r-stack
-
 ![](pden1.png){.fragment}
 
 ![](pden2.png){.fragment}
@@ -907,10 +855,9 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 ![](pden3.png){.fragment}
 
 ![](pden4.png){.fragment}
-
 :::
 
-##
+## 
 
 ```{r}
 library(ggplot2)
@@ -927,7 +874,7 @@ enso<- ggplot(Allyear_ano_pden_ts, aes(x = year, y = value,group=1)) +
 ggplotly(enso)
 ```
 
-##
+## 
 
 ```{r}
 sourcedata<- read.csv("sstpden.csv")
@@ -942,45 +889,34 @@ ggplotly(pdensst)
 
 ## global bisi
 
-
-
-##
+## 
 
 ##  {auto-animate="true" data-background-image="observation_titile.png"}
 
-Limitations, possibilities  and Applications 
+Limitations, possibilities and Applications
 
 ##  {auto-animate="true" data-background-image="observation_titile.png"}
 
 **Forecasting submerged Chlorophyll with Machine Learning**
 
-Limitations, possibilities  and Applications 
+Limitations, possibilities and Applications
 
-##
+## 
 
 ::: columns
-
 ::: {.column width="50%"}
-
 ![](model_simu.png)
-
 :::
-
 
 ::: {.column width="50%"}
-
 ![](sensitivity.png)
-
-
 :::
 :::
 
-##
+## 
 
 ::: columns
-
 ::: {.column width="50%"}
-
 ```{r out.width="80%"}
 data_bloom<- read.csv("chl_phys.csv")
 
@@ -993,37 +929,25 @@ chlphys<- ggplot(data_bloom, aes(phys, chl) ) +
 
 ggplotly(chlphys)
 ```
-
 :::
-
 
 ::: {.column width="50%"}
-
-
-
 :::
 :::
 
-##
+## 
 
 ::: columns
-
 ::: {.column width="50%"}
-
 ![](pca_surf.png)
-
 :::
-
 
 ::: {.column width="50%"}
-
 ![](pca_scm.png)
-
-
 :::
 :::
 
-##
+## 
 
 ![](neuralnet.png){.r-stretch}
 
@@ -1031,15 +955,12 @@ ggplotly(chlphys)
 
 ![](neuro_obs.png){.r-stretch}
 
-##
+## 
 
-
-##
+## 
 
 ::: columns
-
 ::: {.column width="50%"}
-
 ```{r out.width="80%"}
 
 dataD2<- read.csv("D2_phase.csv")
@@ -1052,14 +973,9 @@ fig <- plot_ly(dataD2, x = ~sst, y = ~pden, z = ~chl, type = 'scatter3d', mode =
 
 fig
 ```
-
-
-
 :::
 
-
 ::: {.column width="50%"}
-
 ```{r out.width="80%"}
 
 dataD8<- read.csv("D8_phase.csv")
@@ -1072,318 +988,223 @@ fig <- plot_ly(dataD8, x = ~sst, y = ~pden, z = ~chl, type = 'scatter3d', mode =
 
 fig
 ```
-
-
-:::
-:::
-
-##
-
-![](chaos_chl.png)
-
-##
-
-![](chaos_temp.png)
-
-##
-
-![](chaos_sig.png)
-
-
-## Summary and Conclusion {background-color="aquamarine"}
- 
-::: {.fragment .fade-up}
-
-::: {.r-fit-text}
-
--  Interactions of phytoplankton with prevailing stratified fluid systems are highly reflected in the vertical distribution of chlorophyll profiles
-
-:::
-:::
-
-::: {.fragment .fade-up}
-::: {.r-fit-text}
-
-
-- The insights reveals that the warming have immediate impacts in phytoplankton groups, by increasing its settling velocity resulting in subsurface aggregation
-
-:::
-:::
-
-
-
-::: {.fragment .fade-up}
-::: {.r-fit-text}
-
-- Settling in the subsurface leads to increase the plasticity among phytoplankton which thrive in low light
-
-:::
-:::
-
-::: {.fragment .fade-up}
-::: {.r-fit-text}
-
-- As global warming is an emerging threat, the findings will  direct towards low light abundance as a critical wayout defining the  adaptation strategies  of the phytoplankton community
-
-:::
-:::
-
-## Summary and Conclusion {background-color="turquoise"}
-
-
-::: {.fragment .fade-up}
-::: {.r-fit-text}
-
-- The subsurface is comparatively suitable in the warming scenario, than surface, in terms of  stability, nutrient availability and optimum temperature
-
-:::
-:::
-
-
-::: {.fragment .fade-up}
-::: {.r-fit-text}
-
-- The warming scenarios have varying influences on local and global scales, and the gradient in surface density is getting decreased over the period due to stratification
-
-
-:::
-:::
-
-::: {.fragment .fade-up}
-::: {.r-fit-text}
-
-- Stratification results in strengthening of  new productive subsurface layer, which is optimum for several phytoplankton species, and maintain as a  prominent subsurface chlorophyll maxima (SCM)
-
-:::
-:::
-
-:::{.fragment .fade-up}
-::: {.r-fit-text}
-
-- Stratification in oceanic systems with proximity to landlocked areas are favourable for mixotrophic Noctiluca (blooming), which have been  rapid since 2000
-
-:::
-:::
-
-
-## Summary and Conclusion {background-color="salmon"}
-
-:::{.fragment .fade-up}
-::: {.r-fit-text}
-
-- Seasonal stratifications is observed to be early in the recent years, resulting in bloom formation in advance especially in landlocked areas, available with nutrients.
-
-:::
-:::
-
-:::{.fragment .fade-up}
-::: {.r-fit-text}
-
-- Both fluid and phytoplankton innate mechanisms (motility) associated with complex ecosystem interactions create chaos, and so is difficult to forecast the submerged chlorophyll.
-
-:::
-:::
-
-
-:::{.fragment .fade-up}
-::: {.r-fit-text}
-
-- Estimates of primary production is uncertain without considering the submerged chlorophylls
-
-:::
-:::
-
-:::{.fragment .fade-up}
-::: {.r-fit-text}
-
-- Deep learning algorithms such as Artificial Neural Nets are really useful to predict the chlorophyll profile
-
-:::
-:::
-
-## Major publications from the thesis  {data-background-image="pub1.png"}
-
-::: columns
-
-::: {.column width="40%"}
-::: {.r-fit-text}
-
-Subsurface Chlorophyll Maxima In The North Eastern
-Arabian Sea: Simulation On Impact Of Warming
-_Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla, M Sudhakar_. **Ecological Indicators**, 2020
-
-:::
-:::
-
-
-::: {.column width="60%"}
-:::
-:::
-
-## Major publications from the thesis  {data-background-image="pub2.png"}
-
-::: columns
-
-::: {.column width="40%"}
-::: {.r-fit-text}
-
-Subsurface Chlorophyll Maxima In The North Eastern
-Arabian Sea: Simulation On Impact Of Warming
-_Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla, M Sudhakar_. **Ecological Indicators**, 2020
-
-:::
-:::
-
-
-::: {.column width="60%"}
-:::
-:::
-
-## Major publications from the thesis  {data-background-image="pub3.png"}
-
-::: columns
-
-::: {.column width="40%"}
-::: {.r-fit-text}
-
-Subsurface Chlorophyll Maxima In The North Eastern
-Arabian Sea: Simulation On Impact Of Warming
-_Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla, M Sudhakar_. **Ecological Indicators**, 2020
-
-Role of mesoscale eddies in the sustenance of high biological productivity in North Eastern Arabian Sea during the winter-spring transition period.
-_B.R., Smitha, Sanjeevan, V.N.,Padmakumar, K.B., Midhun Shah Hussain, Salini, T.C., Lix, J.K._ **Science of The Total Environment** 2021
-
-:::
-:::
-
-
-::: {.column width="60%"}
-:::
-:::
-
-## Major publications from the thesis  {data-background-image="pub4.png"}
-
-::: columns
-
-::: {.column width="40%"}
-::: {.r-fit-text}
-
-Subsurface Chlorophyll Maxima In The North Eastern
-Arabian Sea: Simulation On Impact Of Warming
-_Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla, M Sudhakar_. **Ecological Indicators**, 2020
-
-Role of mesoscale eddies in the sustenance of high biological productivity in North Eastern Arabian Sea during the winter-spring transition period.
-_B.R., Smitha, Sanjeevan, V.N.,Padmakumar, K.B., Midhun Shah Hussain, Salini, T.C., Lix, J.K._ **Science of The Total Environment** 2021
-
-:::
-:::
-
-
-::: {.column width="60%"}
-:::
-:::
-
-## Major publications from the thesis  {data-background-image="pub5.png"}
-
-::: columns
-
-::: {.column width="40%"}
-::: {.r-fit-text}
-
-Subsurface Chlorophyll Maxima In The North Eastern
-Arabian Sea: Simulation On Impact Of Warming
-_Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla, M Sudhakar_. **Ecological Indicators**, 2020
-
-Role of mesoscale eddies in the sustenance of high biological productivity in North Eastern Arabian Sea during the winter-spring transition period.
-_B.R., Smitha, Sanjeevan, V.N.,Padmakumar, K.B., Midhun Shah Hussain, Salini, T.C., Lix, J.K._ **Science of The Total Environment** 2021
-
-Ponman: An R Package For Bio-Argo Data Analysis
-_Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla_ **SEANOE** 2020
-
-:::
-:::
-
-
-::: {.column width="60%"}
-:::
-:::
-
-## {auto-animate=true}
-
-Collaborations 
-
-## {auto-animate=true}
-
-Publications from 
-
-Collaborations
-
-
-
-##  {data-background-image="col1.png"}
-
-::: columns
-
-::: {.column width="60%"}
-:::
-
-::: {.column width="40%"}
-
-::: {.r-fit-text}
-
-Differentiation of two Chlorophthalmus species Chlorophthalmus corniger (Alcock, 1894) and C. acutifrons (Hiyama, 1940) based on otolith morphometry
-_R Nikki, KV Kumar, K Oxona, MP Rajeeshkumar, KK Bineesh, Midhun Shah Hussain, H Manjebrayakath, N Saravanane, M Sudhakar._ **Indian Journal of Geo Marine Sciences**, 2021
-
-:::
-
-:::
-:::
-
-
-##  {data-background-image="col2.png"}
-
-::: columns
-
-::: {.column width="60%"}
-:::
-
-::: {.column width="40%"}
-
-::: {.r-fit-text}
-
-Faecal contamination and prevalence of pathogenic E. coli
-in shellfish growing areas along south-west coast of India.
-_Ally C Antony, Reshma Silvester, PS Divya, PA Aneesa, Bini Francis, Midhun Shah Hussain, BT Umesh, Joy George, Mohamed Hatha Abdulla._ **Regional Studies in Marine Science** 2021
-
-:::
-
-:::
-:::
-
-
-##  {data-background-image="col3.png"}
-
-::: columns
-
-::: {.column width="70%"}
-:::
-
-::: {.column width="30%"}
-
-::: {.r-fit-text}
-
-Seasonal Dynamics of Major Phytoplankton Functional Types in the Coastal Waters of the West Coast of Canada Derived from OLCI Sentinel 3A.
-_Perumthuruthil Suseelan, V., Xi, H., Belluz, J. D. B.,Midhun Shah Hussain., Bracher, A., & Costa, M. (1 C.E.)_.**Frontiers in Marine Science**, 2022.
-
-:::
-
 :::
 :::
 
 ## 
 
-::: {.r-fit-text}
+![](chaos_chl.png)
 
-Thank you 
+## 
 
+![](chaos_temp.png)
+
+## 
+
+![](chaos_sig.png)
+
+## Summary and Conclusion {background-color="aquamarine"}
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   Interactions of phytoplankton with prevailing stratified fluid systems are highly reflected in the vertical distribution of chlorophyll profiles
+:::
+:::
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   The insights reveals that the warming have immediate impacts in phytoplankton groups, by increasing its settling velocity resulting in subsurface aggregation
+:::
+:::
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   Settling in the subsurface leads to increase the plasticity among phytoplankton which thrive in low light
+:::
+:::
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   As global warming is an emerging threat, the findings will direct towards low light abundance as a critical wayout defining the adaptation strategies of the phytoplankton community
+:::
+:::
+
+## Summary and Conclusion {background-color="turquoise"}
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   The subsurface is comparatively suitable in the warming scenario, than surface, in terms of stability, nutrient availability and optimum temperature
+:::
+:::
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   The warming scenarios have varying influences on local and global scales, and the gradient in surface density is getting decreased over the period due to stratification
+:::
+:::
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   Stratification results in strengthening of new productive subsurface layer, which is optimum for several phytoplankton species, and maintain as a prominent subsurface chlorophyll maxima (SCM)
+:::
+:::
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   Stratification in oceanic systems with proximity to landlocked areas are favourable for mixotrophic Noctiluca (blooming), which have been rapid since 2000
+:::
+:::
+
+## Summary and Conclusion {background-color="salmon"}
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   Seasonal stratifications is observed to be early in the recent years, resulting in bloom formation in advance especially in landlocked areas, available with nutrients.
+:::
+:::
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   Both fluid and phytoplankton innate mechanisms (motility) associated with complex ecosystem interactions create chaos, and so is difficult to forecast the submerged chlorophyll.
+:::
+:::
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   Estimates of primary production is uncertain without considering the submerged chlorophylls
+:::
+:::
+
+::: {.fragment .fade-up}
+::: r-fit-text
+-   Deep learning algorithms such as Artificial Neural Nets are really useful to predict the chlorophyll profile
+:::
+:::
+
+## Major publications from the thesis {data-background-image="pub1.png"}
+
+::: columns
+::: {.column width="40%"}
+::: r-fit-text
+Subsurface Chlorophyll Maxima In The North Eastern Arabian Sea: Simulation On Impact Of Warming *Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla, M Sudhakar*. **Ecological Indicators**, 2020
+:::
+:::
+
+::: {.column width="60%"}
+:::
+:::
+
+## Major publications from the thesis {data-background-image="pub2.png"}
+
+::: columns
+::: {.column width="40%"}
+::: r-fit-text
+Subsurface Chlorophyll Maxima In The North Eastern Arabian Sea: Simulation On Impact Of Warming *Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla, M Sudhakar*. **Ecological Indicators**, 2020
+:::
+:::
+
+::: {.column width="60%"}
+:::
+:::
+
+## Major publications from the thesis {data-background-image="pub3.png"}
+
+::: columns
+::: {.column width="40%"}
+::: r-fit-text
+Subsurface Chlorophyll Maxima In The North Eastern Arabian Sea: Simulation On Impact Of Warming *Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla, M Sudhakar*. **Ecological Indicators**, 2020
+
+Role of mesoscale eddies in the sustenance of high biological productivity in North Eastern Arabian Sea during the winter-spring transition period. *B.R., Smitha, Sanjeevan, V.N.,Padmakumar, K.B., Midhun Shah Hussain, Salini, T.C., Lix, J.K.* **Science of The Total Environment** 2021
+:::
+:::
+
+::: {.column width="60%"}
+:::
+:::
+
+## Major publications from the thesis {data-background-image="pub4.png"}
+
+::: columns
+::: {.column width="40%"}
+::: r-fit-text
+Subsurface Chlorophyll Maxima In The North Eastern Arabian Sea: Simulation On Impact Of Warming *Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla, M Sudhakar*. **Ecological Indicators**, 2020
+
+Role of mesoscale eddies in the sustenance of high biological productivity in North Eastern Arabian Sea during the winter-spring transition period. *B.R., Smitha, Sanjeevan, V.N.,Padmakumar, K.B., Midhun Shah Hussain, Salini, T.C., Lix, J.K.* **Science of The Total Environment** 2021
+:::
+:::
+
+::: {.column width="60%"}
+:::
+:::
+
+## Major publications from the thesis {data-background-image="pub5.png"}
+
+::: columns
+::: {.column width="40%"}
+::: r-fit-text
+Subsurface Chlorophyll Maxima In The North Eastern Arabian Sea: Simulation On Impact Of Warming *Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla, M Sudhakar*. **Ecological Indicators**, 2020
+
+Role of mesoscale eddies in the sustenance of high biological productivity in North Eastern Arabian Sea during the winter-spring transition period. *B.R., Smitha, Sanjeevan, V.N.,Padmakumar, K.B., Midhun Shah Hussain, Salini, T.C., Lix, J.K.* **Science of The Total Environment** 2021
+
+Ponman: An R Package For Bio-Argo Data Analysis *Midhun Shah Hussain, Smitha B. R, Mohamed Hatha Abdulla* **SEANOE** 2020
+:::
+:::
+
+::: {.column width="60%"}
+:::
+:::
+
+##  {auto-animate="true"}
+
+Collaborations
+
+##  {auto-animate="true"}
+
+Publications from
+
+Collaborations
+
+##  {data-background-image="col1.png"}
+
+::: columns
+::: {.column width="60%"}
+:::
+
+::: {.column width="40%"}
+::: r-fit-text
+Differentiation of two Chlorophthalmus species Chlorophthalmus corniger (Alcock, 1894) and C. acutifrons (Hiyama, 1940) based on otolith morphometry *R Nikki, KV Kumar, K Oxona, MP Rajeeshkumar, KK Bineesh, Midhun Shah Hussain, H Manjebrayakath, N Saravanane, M Sudhakar.* **Indian Journal of Geo Marine Sciences**, 2021
+:::
+:::
+:::
+
+##  {data-background-image="col2.png"}
+
+::: columns
+::: {.column width="60%"}
+:::
+
+::: {.column width="40%"}
+::: r-fit-text
+Faecal contamination and prevalence of pathogenic E. coli in shellfish growing areas along south-west coast of India. *Ally C Antony, Reshma Silvester, PS Divya, PA Aneesa, Bini Francis, Midhun Shah Hussain, BT Umesh, Joy George, Mohamed Hatha Abdulla.* **Regional Studies in Marine Science** 2021
+:::
+:::
+:::
+
+##  {data-background-image="col3.png"}
+
+::: columns
+::: {.column width="70%"}
+:::
+
+::: {.column width="30%"}
+::: r-fit-text
+Seasonal Dynamics of Major Phytoplankton Functional Types in the Coastal Waters of the West Coast of Canada Derived from OLCI Sentinel 3A. *Perumthuruthil Suseelan, V., Xi, H., Belluz, J. D. B.,Midhun Shah Hussain., Bracher, A., & Costa, M. (1 C.E.)*.**Frontiers in Marine Science**, 2022.
+:::
+:::
+:::
+
+## 
+
+::: r-fit-text
+Thank you
 :::
