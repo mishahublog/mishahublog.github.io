@@ -7,8 +7,6 @@ format:
 editor: visual
 editor_options: 
   chunk_output_type: inline
-  type: website
-  output-dir: docs
 ---
 
 ## Background
