@@ -442,9 +442,13 @@ fig
 ::: {.column width="50%"}
 **Seasonality of PAR on SCM**
 
+::: r-fit-text
 -   Seasonality of PAR affects surface chlorophyll
 -   But SCM didn't have much effects on PAR
 -   The PAR have a stable exponential decay at subsurface
+:::
+
+
 :::
 :::
 
@@ -770,6 +774,8 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 Early occurrence of Phytoplankton blooms in NEAS ?
 :::
 
+
+
 ## 
 
 ::: columns
@@ -798,11 +804,13 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 :::
 
 ::: {.column width="50%"}
+::: incremental
 ::: r-fit-text
 -   The chlorophyll values were high(blooms) only during March in the earlier days
 -   However, the onset of blooming is observed to be early in the recent years
 -   The Month of February and March is very critical for blooms, due to the withdrawal of convective mixing and initiation of stratification during the period
 -   As reflected in the changes in density, it is concluded that the early blooming is due to the early stratification
+:::
 :::
 :::
 :::
