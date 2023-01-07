@@ -357,11 +357,11 @@ An inverted gaussian can easily represent the SCM
 
 ![](temporaldat3.png){.r-stretch}
 
-##  {auto-animate="true" data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="chapter3.png"}
 
 Understanding Process and Interactions
 
-##  {auto-animate="true" data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="chapter3.png"}
 
 **Phytoplankton and Fluid dynamics**
 
@@ -1210,5 +1210,5 @@ Seasonal Dynamics of Major Phytoplankton Functional Types in the Coastal Waters 
 ## 
 
 ::: r-fit-text
-Thank you
+Thank you you
 :::
