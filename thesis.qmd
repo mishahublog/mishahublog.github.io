@@ -414,7 +414,7 @@ fig
 :::
 :::
 
-## par {data-background-image="par-3d-bg1.png" background-size="1500px"}
+## Seasonality of PAR on SCM {data-background-image="par-3d-bg1.png" background-size="1500px"}
 
 ::: columns
 ::: {.column width="50%"}
@@ -422,7 +422,7 @@ fig
 
 ::: {.column width="50%"}
 ::: incremental
-**Seasonality of PAR on SCM**
+
 
 ::: r-fit-text
 -   Seasonality of PAR affects surface chlorophyll
@@ -433,14 +433,13 @@ fig
 :::
 :::
 
-## par {data-background-image="par-3d-bg2.png" background-size="1500px"}
+## Seasonality of PAR on SCM {data-background-image="par-3d-bg2.png" background-size="1500px"}
 
 ::: columns
 ::: {.column width="50%"}
 :::
 
 ::: {.column width="50%"}
-**Seasonality of PAR on SCM**
 
 ::: r-fit-text
 -   Seasonality of PAR affects surface chlorophyll
@@ -448,7 +447,7 @@ fig
 -   The PAR have a stable exponential decay at subsurface
 :::
 :::
-:::
+
 
 :::
 
@@ -762,13 +761,13 @@ decreasing variability over years
 
 ##  {auto-animate="true"}
 
-::: {style="margin-top: 100px;"}
+::: {style="margin-top: 50px;"}
 Early occurrence of Phytoplankton blooms in NEAS ?
 :::
 
 ##  {auto-animate="true"}
 
-::: {style="margin-top: 200px; font-size: 3em; color: blue ;"}
+::: {style="margin-top: 100px; font-size: 1em; color: blue ;"}
 Early occurrence of Phytoplankton blooms in NEAS ?
 :::
 
@@ -891,7 +890,27 @@ ggplotly(pdensst)
 
 ```
 
-## global bisi
+## 
+```{r fig.align='center'}
+library(raster)
+library(threejs)
+library(colorRamps)
+bisi<- raster("bisi.nc")
+bisi_dat<- rasterToPoints(bisi)
+  bisi_dat<- data.frame(rasterToPoints(bisi))
+ 
+ bisi_val<- bisi_dat[order(bisi_dat$layer, decreasing=TRUE),]
+ value  <- 100 * bisi_dat$layer / max(bisi_dat$layer)
+ col<- matlab.like(9)[floor(10 * value/100) + 1]
+ earth<- "world.topo.bathy.200412.3x5400x2700.jpg"
+ globejs(img = earth,
+         lat = bisi_dat$y,
+         long = bisi_dat$x,
+         val = bisi_dat$layer,color = col,bg = "white")
+```
+
+
+
 
 ## 
 
