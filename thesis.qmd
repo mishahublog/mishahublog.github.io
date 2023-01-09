@@ -1,8 +1,11 @@
 ---
-title: "Biophysical"
+title: ". . ."
+title-slide-attributes:
+  data-background-image: "titlepage.png"
 format: 
    revealjs:
       chalkboard: true
+      transition-speed: fast
       theme: default
 editor: visual
 editor_options: 
@@ -422,8 +425,6 @@ fig
 
 ::: {.column width="50%"}
 ::: incremental
-
-
 ::: r-fit-text
 -   Seasonality of PAR affects surface chlorophyll
 -   But SCM didn't have much effects on PAR
@@ -440,15 +441,12 @@ fig
 :::
 
 ::: {.column width="50%"}
-
 ::: r-fit-text
 -   Seasonality of PAR affects surface chlorophyll
 -   But SCM didn't have much effects on PAR
 -   The PAR have a stable exponential decay at subsurface
 :::
 :::
-
-
 :::
 
 ## How Fluid density drives the chlorophyll?
@@ -709,7 +707,7 @@ ggplotly(c)
 
 ## 
 
-SCM strengthen and warming seasons on various years
+Warming effects on Noctiluca distributions
 
 ::: columns
 ::: {.column width="40%"}
@@ -731,14 +729,12 @@ SCM strengthen and warming seasons on various years
 
 ## 
 
-::: columns
-::: {.column width="100%"}
-```{r out.width=="40%",}
+```{r out.width=="100%",}
 ts_neas_dat<- read.csv("sigma_neas.csv")
 ts_neas_dat$date<- as.Date(ts_neas_dat$date)
 library(ggplot2)
 
-ts_neas<- ggplot(ts_neas_dat, aes(x = date, y = den,group=1)) + geom_line(size=1)+geom_smooth()
+ts_neas<- ggplot(ts_neas_dat, aes(x = date, y = den,group=1)) + geom_line(size=1)+geom_smooth()+ ylab("Potential Density")+ xlab("year")
 
 
 library(plotly)
@@ -746,18 +742,6 @@ ggplotly(ts_neas)
 
 
 ```
-:::
-
-::: {.column width="40%"}
-::: r-fit-text
-::: incremental
-decreasing variability over years
-:::
-:::
-:::
-:::
-
-## 
 
 ##  {auto-animate="true"}
 
@@ -767,46 +751,42 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 
 ##  {auto-animate="true"}
 
-::: {style="margin-top: 100px; font-size: 1em; color: blue ;"}
+::: {style="margin-top: 100px; font-size: 2em; color:aquamarine ;"}
 Early occurrence of Phytoplankton blooms in NEAS ?
 :::
 
 ## 
 
-::: columns
-::: {.column width="50%"}
 ::: r-stack
-![](feb10wav.png){.fragment width="600" height="600"}
+![](feb10wav.png){.fragment .absolute width="600" height="700" top="50" left="200"}
 
-![](feb15wav.png){.fragment width="600" height="600"}
+![](feb15wav.png){.fragment .absolute width="600" height="700" top="50" left="200"}
 
-![](feb20wav.png){.fragment width="600" height="600"}
+![](feb20wav.png){.fragment .absolute width="600" height="700" top="50" left="200"}
 
-![](feb25wav.png){.fragment width="600" height="600"}
+![](feb25wav.png){.fragment .absolute width="600" height="700" top="50" left="200"}
 
-![](mar1wave.png){.fragment width="600" height="600"}
+![](mar1wave.png){.fragment .absolute width="600" height="700" top="50" left="200"}
 
-![](mar06wav.png){.fragment width="600" height="600"}
+![](mar06wav.png){.fragment .absolute width="600" height="700" top="50" left="200"}
 
-![](mar11wav.png){.fragment width="600" height="600"}
+![](mar11wav.png){.fragment .absolute width="600" height="700" top="50" left="200"}
 
-![](mar16wav.png){.fragment width="600" height="600"}
+![](mar16wav.png){.fragment .absolute width="600" height="700" top="50" left="200"}
 
-![](mar21wav.png){.fragment width="600" height="600"}
+![](mar21wav.png){.fragment .absolute width="600" height="700" top="50" left="200"}
 
-![](mar26wav.png){.fragment width="600" height="600"}
+![](mar26wav.png){.fragment .absolute width="600" height="700" top="50" left="200"}
 :::
-:::
 
-::: {.column width="50%"}
+## Early startification leads to early blooms {background-color="aquamarine"}
+
 ::: incremental
 ::: r-fit-text
 -   The chlorophyll values were high(blooms) only during March in the earlier days
 -   However, the onset of blooming is observed to be early in the recent years
 -   The Month of February and March is very critical for blooms, due to the withdrawal of convective mixing and initiation of stratification during the period
 -   As reflected in the changes in density, it is concluded that the early blooming is due to the early stratification
-:::
-:::
 :::
 :::
 
@@ -820,6 +800,8 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 ::: {.column width="40%"}
 ::: r-fit-text
 ::: incremental
+-   The Wavelet decompositions suggest that pycnocline depth and surface chlorophyll have interactions
+-   The low frequency decompositions of pycnocline are well aligned with surface chlorophyll
 :::
 :::
 :::
@@ -833,22 +815,31 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 :::
 
 ::: {.column width="40%"}
+::: r-fit-text
+::: incremental
+-   The wavelet decomposition in low frequencies (D7 and D8 waves) are strongly concurrent between the surface chl-a and pycnocline depth
+
+-   The periods seems to be frequent within a range of 128 & 256 days
+
+-   The changes in pycnocline are significant in NEAS because the nutrient -depleted surface waters enrich by pycnocline due to wind mixing
 :::
 :::
-
-## Wavelet Coherence: pycnocline depths vs surface chlorophyll
-
-::: r-stretch
-![](pycnocline%20depths%20vs%20surface%20chlorophyll.png)
 :::
-
-## Wavelet Coherence: pycnocline vs SCM
-
-::: r-stretch
-![](pycnocline%20vs%20SCM.png)
 :::
 
 ## 
+
+![](pycnocline%20depths%20vs%20surface%20chlorophyll.png)
+
+Wavelet Coherence: **pycnocline depths** vs **surface chlorophyll**
+
+## 
+
+![](pycnocline%20vs%20SCM.png)
+
+Wavelet Coherence: **pycnocline** vs **SCM**
+
+## Potential density anomalies over the decades
 
 ::: r-stack
 ![](pden1.png){.fragment}
@@ -862,7 +853,7 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 
 ## 
 
-```{r}
+```{r fig.align='center',out.width="100%"}
 library(ggplot2)
 library(plotly)
 Allyear_ano_pden_ts<- read.csv("ensodat.csv")
@@ -891,7 +882,10 @@ ggplotly(pdensst)
 ```
 
 ## 
-```{r fig.align='center'}
+
+::: columns
+::: {.column width="60%"}
+```{r out.width="80%"}
 library(raster)
 library(threejs)
 library(colorRamps)
@@ -909,10 +903,17 @@ bisi_dat<- rasterToPoints(bisi)
          val = bisi_dat$layer,color = col,bg = "white")
 ```
 
+![](bisi_scale.png)
+:::
 
-
-
-## 
+::: {.column width="40%"}
+::: r-fit-text
+::: incremental
+-   The SST-PDEN ratio relationship with SCM is utlized to derive Biologically Influenced Stratification Index (BISI) \_ BISI describes the probable SCM in locations, where the SST is increasing and density decreases
+:::
+:::
+:::
+:::
 
 ##  {auto-animate="true" data-background-image="observation_titile.png"}
 
@@ -977,8 +978,6 @@ ggplotly(chlphys)
 ## 
 
 ![](neuro_obs.png){.r-stretch}
-
-## 
 
 ## 
 
@@ -1228,6 +1227,19 @@ Seasonal Dynamics of Major Phytoplankton Functional Types in the Coastal Waters 
 
 ## 
 
-::: r-fit-text
-Thank you you
+::: columns
+::: {.column width="60%"}
+![](set_anime.gif)
+
 :::
+
+::: {.column width="40%"}
+
+::: {.r-fit-text}
+
+Thank you 
+
+:::
+:::
+:::
+
