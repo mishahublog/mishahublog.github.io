@@ -1,15 +1,18 @@
 ---
-title: ". . ."
+title: "Biophysical coupling: Chlorophyll-a dynamics of the North Eastern Arabian Sea in a warming scenario"
+subtitle: Midhun shah Hussain \n
+          Senior Research Fellow
+description: testing 
 title-slide-attributes:
-  data-background-image: "titlepage.png"
+  data-background-image: ""
 format: 
-   revealjs:
-      chalkboard: true
+  revealjs:
+      chalkboard: TRUE
       transition-speed: fast
       theme: default
-editor: visual
-editor_options: 
-  chunk_output_type: inline
+      editor: visual
+      editor_options: 
+         chunk_output_type: inline
 ---
 
 ## Background
@@ -17,12 +20,10 @@ editor_options:
 ::: columns
 ::: {.column width="40%"}
 ::: incremental
-::: r-fit-text
 -   Surface chlorophyll has declining phase with increasing warming scenarios and several controversial results have also come in this field
 -   Recurring blooms in North eastern Arabian Sea associated with subsurface - chlorophyll maxima(SCM)
 -   Extension in stratifications in NEAS & global
 -   Satellites shown underestimates in column primary productions
-:::
 :::
 :::
 
@@ -108,7 +109,6 @@ chapter 1
 
 ## Objectives of the study
 
-::: r-fit-text
 ::: incremental
 Critical Questions to address
 
@@ -116,7 +116,6 @@ Critical Questions to address
 -   Which is more in control and immediate effect on the column productivity system of NEAS?
 -   How climate change and global warming affect the NEAS system as well as the global?
 -   Constraints and advances in predicting subsurface chlorophyll
-:::
 :::
 
 ::: footer
@@ -127,7 +126,7 @@ chapter 1
 speaker notes testing
 :::
 
-## Code
+## 
 
 ![](scm_schem1.png){fig-align="center"}
 
@@ -135,7 +134,7 @@ speaker notes testing
 chapter 1
 :::
 
-## dfdf
+## 
 
 ![](scm_schem2.png){fig-align="center"}
 
@@ -156,22 +155,20 @@ chapter 1
 ::: columns
 ::: {.column width="40%"}
 ::: incremental
-::: r-fit-text
 -   It is a prominent feature in tropical seas.
 -   Have significant contribution in PP
 -   But mostly it is underestimated by currently using PP models.
--   A significant component varying by seasonality.
+-   Exhibit strong seasonality
 -   A probe to understand the climate change impacts
-:::
 :::
 :::
 
 ::: {.column width="40%"}
-What are the variations and its patterns?
+**What are the variations and its patterns?**
 
 ::: incremental
 ::: r-fit-text
--   Strong inverse correlation between Mixed Layer Depth(MLD) and subsurface chlorophyll Maxima(SCM).
+-   Strong inverse correlation with Mixed Layer Depth(MLD)
 -   Atmospheric forcing and stability of water column are important factors which drives its occurrence.
 -   Phytoplankton species composition is a major factor on determining the peak magnitudes.
 -   Species composition is positively correlated with PAR intensity\
@@ -188,6 +185,10 @@ chapter 1
 
 ![](timeline.png){fig-align="left"}
 
+::: footer
+**chapter 1**
+:::
+
 ##  {auto-animate="true" data-background-image="observation_titile.png"}
 
 Study location, Algorithms and sampling
@@ -201,17 +202,16 @@ Study location, Algorithms and sampling
 ## Data Sources {data-background-image="datasources_bg.png"}
 
 ::: columns
-::: {.column width="30%"}
+::: {.column width="50%"}
 ::: incremental
 ::: r-fit-text
 -   Bio Argo profiles\[2013-2018\]
--   Insitu CTD profiles\[2013-2018\]
--   Wind data.
+-   *In situ* CTD profiles\[2013-2018\]
+-   Wind data (ASCAT)
 -   Aqua MODIS PAR data.
 -   Aqua MODIS Fluorescence
--   Tropoflux swr
--   From experimental setups
--   Phytoplankton published Datasets
+-   Tropoflux SWR
+-   Published datasets
 :::
 :::
 :::
@@ -223,7 +223,7 @@ Study location, Algorithms and sampling
 
 ## 
 
-![](bioargo2.png){fig-align="left"}
+![](bioargo2.png){fig-align="centre"}
 
 ##  {data-background-image="cruisectd1.png" background-size="1390px"}
 
@@ -234,12 +234,10 @@ Study location, Algorithms and sampling
 :::
 
 ::: {.column width="50%"}
-::: r-fit-text
 CTD spec & Probes
 
 -   SBE (Model 11 PLUS, Sea-Bird Inc.) in 1 m bin intervals.
 -   The CTD system is equipped with auxiliary sensors of dissolved oxygen, fluorescence and photosynthetic active radiation (PAR)
-:::
 :::
 :::
 
@@ -252,11 +250,9 @@ CTD spec & Probes
 
 ::: {.column width="30%"}
 ::: incremental
-::: r-fit-text
 -   The study region North Eastern Arabian Sea is monitored using both CTD and BioArgo
 -   Season- quiescent and warm month of Spring InterMonsoon
 -   Preferred sampling from open ocean to find the innate upper ocean dynamics due to stratification
-:::
 :::
 :::
 :::
@@ -425,11 +421,9 @@ fig
 
 ::: {.column width="50%"}
 ::: incremental
-::: r-fit-text
 -   Seasonality of PAR affects surface chlorophyll
 -   But SCM didn't have much effects on PAR
 -   The PAR have a stable exponential decay at subsurface
-:::
 :::
 :::
 :::
@@ -441,11 +435,9 @@ fig
 :::
 
 ::: {.column width="50%"}
-::: r-fit-text
 -   Seasonality of PAR affects surface chlorophyll
 -   But SCM didn't have much effects on PAR
 -   The PAR have a stable exponential decay at subsurface
-:::
 :::
 :::
 
@@ -474,13 +466,14 @@ fitpoints <- predict(fit)
 #library(plot3D)
 #test
  library(colorRamps)
- cols <- c("pink", "purple")
+ cols <- c("skyblue","green")
+   #c("pink", "purple")
  cols <- cols[z+1] 
  library(plotly)
  plot_ly(x=~x.pred, y=~y.pred, z=~z.pred, 
          colorbar = list(title = "Fitted \n Chlorophyll"),
-         colors = 
-           c("pink","purple"),
+         colors = matlab.like(20),
+          # c("pink","purple"),
          type="surface") %>%
    add_trace( x=x, y=y, z=z, mode="markers", type="scatter3d",
              # text=c("Density","PAR","chlor"),
@@ -503,15 +496,13 @@ fitpoints <- predict(fit)
 
 ::: columns
 ::: {.column width="50%"}
-::: r-fit-text
-Four species were more focused due to its abundance in this location
+Four species were more focused due to its abundance in this location concurrent to BioArgo
 
 ::: incremental
 1)  *Noctiluca scintillans*
 2)  *Guinardia striata*
 3)  *Thalassiothrix longissima*
 4)  *Nitzschia longissima*
-:::
 :::
 :::
 
@@ -525,17 +516,14 @@ Four species were more focused due to its abundance in this location
 ::: columns
 ::: {.column width="40%"}
 ::: incremental
-::: r-fit-text
 -   In stable sea conditions (March/spring) particle sinking or phytoplankton settlement can be well explained by Stokes Theorem
 -   Phytoplankton maintains the buoyancy by its innate mechanisms of gas vacuoles and lipids and often are heavier than seawater
 -   The density of phytoplankton depends on the volume rather than mass which depends on respiration and photosynthesis
--   This disproportion in mass and volume makes the phytoplankton (especially diatoms) positively buoyant after a critical size range (Gross and Zeuthen, 1948)
-:::
 :::
 :::
 
 ::: {.column width="50%"}
-![](settling%20equation.png)
+![](settling%20equation.png) - This disproportion in mass and volume makes the phytoplankton (especially diatoms) positively buoyant after a critical size range (Gross and Zeuthen, 1948)
 :::
 :::
 
@@ -546,6 +534,10 @@ Four species were more focused due to its abundance in this location
 ## Density-settling velocity relationships very strong in March
 
 ![](bv_set2.png){.r-stretch}
+
+## A simple experiment
+
+![](set_video.mov){width="600" height="500"}
 
 ##  {auto-animate="true" data-background-image="chapter4.png"}
 
@@ -562,12 +554,10 @@ Physical processes associated with Green Noctiluca Blooms
 ::: columns
 ::: {.column width="40%"}
 ::: incremental
-::: r-fit-text
 -   Blooms have positive relations with hot weather
 -   The current warming scenario in NEAS is not different , and shows increasing yearly.
 -   The NEAS system shows a significant community shift (Diatom to Dinoflagellate) from the year 2000
 -   The addition of mixotrophic dinoflagellate to system enables early blooms and enhance the productivity in the location
-:::
 :::
 :::
 
@@ -580,15 +570,15 @@ Physical processes associated with Green Noctiluca Blooms
 
 ![](bloom_map2.png){.absolute top="100" left="50"}
 
-## When it happenes actually
+## When it blooms
 
 ![](bloom_map3.png){.absolute top="100" left="50"}
 
-## When it happenes actually
+## Influence of extreme events
 
 ![](bloom_map4.png){.absolute top="100" left="50"}
 
-## When it happenes actually
+## But it is entirly absent in early years
 
 ![](bloom_map5.png){.absolute top="100" left="50"}
 
@@ -600,8 +590,10 @@ Physical processes associated with Green Noctiluca Blooms
 :::
 
 ::: {.column width="30%"}
-::: r-fit-text
-The observations found that, surface currents have influence in lifting phytoplankton groups to surface waters. This is well evident from Empirical Orthogonal Teleconnections.
+::: incremental
+-   The observations found that, surface currents have influence in lifting phytoplankton groups to surface waters. This is well evident from Empirical Orthogonal Teleconnections.
+
+-   The lifing is more sensitive when startified waters with shallow MLDs are prominent
 :::
 :::
 :::
@@ -622,13 +614,14 @@ The observations found that, surface currents have influence in lifting phytopla
 
 ![](hovmull_3var2.png)
 
-##  {data-background-image="lv_model.png" background-size="1300px"}
+## Blooms and Surface-Subsurface interactions
 
-Trophic dynamics of SubSurface layers
+![](dtw.png){.r-stretch}
+
+## Trophic dynamics of SubSurface layers {data-background-image="lv_model.png" background-size="1300px"}
 
 ::: columns
 ::: {.column width="30%"}
-::: r-fit-text
 ::: incremental
 -   The LVM models suggest that the Trophic dynamics are efficient in energy transfer
 
@@ -639,9 +632,34 @@ Trophic dynamics of SubSurface layers
 -   The subsurface blooms can be expected more frequent in future warming scenarios
 :::
 :::
-:::
 
 ::: {.column width="0%"}
+:::
+:::
+
+## Redefining Sevrdrup Model
+
+::: columns
+::: {.column width="50%"}
+$$
+H_c \approx h_l \frac{\mu_0}{m}
+$$
+
+Here $H_c$ is critical depth, $\mu_0$ is the phytoplankton population growth rate at the surface in the absence of any biomass loss, $h_l$ is the light extinction coefficient and $m$ is the biomass loss due to respiration, zooplankton grazing, viral lysis, and mortality which is assumed to be in constant depth.
+:::
+
+::: {.column width="50%"}
+**Considering density (Sigma-t) rather than depth(critical depth)**
+
+According to the current study, any layer of strong density gradient in the upper layer is favorrable for phytoplankton $d\sigma t_{max}$ , as it results in low settling velocity, which is expressed as follows
+
+$$
+d\sigma t_{max} \approx [P_z.T_z] \times \frac{Chl_z}{Vz}
+$$
+
+$$
+Chl_z = \frac{d\sigma_{max}}{P_z.T_z} \times V_z 
+$$
 :::
 :::
 
@@ -655,7 +673,7 @@ Global density changes, settling velocities and time shifts in blooms
 
 Global density changes, settling velocities and time shifts in blooms
 
-## 
+## SST variations in decadel scale over four weeks of March
 
 ```{r, out.width="100%",out.height="100%"}
 
@@ -683,11 +701,11 @@ ggplotly(p)
 
 ```
 
-SST variations in decadel scale over four weeks of March
+-   Times series analysis shows an increasing trend throughout the years
+-   The Anomalies are occurred due to extreme events such as ENSO
+-   It is found that the first week of March end with the temperature more than the occurred in the last weeks in its intial phase
 
-## 
-
-SCM strengthen and warming seasons on various years
+## SCM strengthen and warming seasons on various years
 
 ::: columns
 ::: {.column width="50%"}
@@ -702,23 +720,25 @@ c<- ggplot(marchpca,aes(Temp.surf,sigma.scm))+geom_point()+geom_smooth(method = 
 library(plotly)
 ggplotly(c)
 ```
+
+### **Units**
+
+##### Temp.surf - $\circ$ C
+
+##### Sigma.SCM - $kg/{m}^3$
 :::
 :::
 
-## 
-
-Warming effects on Noctiluca distributions
+## Warming effects on Noctiluca distributions
 
 ::: columns
 ::: {.column width="40%"}
-::: r-fit-text
 ::: incremental
 -   Warming -Stratification links to Noctiluca are well reflected in spatial distributions
 
 -   The Northern Hemisphere seems to be subjected to more than south
 
 -   The Land locked areas are more prone to the occurrence of *Noctiluca* blooms due to nutrient availability and efficient stratification
-:::
 :::
 :::
 
@@ -743,19 +763,7 @@ ggplotly(ts_neas)
 
 ```
 
-##  {auto-animate="true"}
-
-::: {style="margin-top: 50px;"}
-Early occurrence of Phytoplankton blooms in NEAS ?
-:::
-
-##  {auto-animate="true"}
-
-::: {style="margin-top: 100px; font-size: 2em; color:aquamarine ;"}
-Early occurrence of Phytoplankton blooms in NEAS ?
-:::
-
-## 
+## Wavelet analysis of blooms in NEAS at WM-SIM transition
 
 ::: r-stack
 ![](feb10wav.png){.fragment .absolute width="600" height="700" top="50" left="200"}
@@ -782,15 +790,13 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 ## Early startification leads to early blooms {background-color="aquamarine"}
 
 ::: incremental
-::: r-fit-text
--   The chlorophyll values were high(blooms) only during March in the earlier days
+-   The chlorophyll values were high(early onset blooms) only during March in the earlier days
 -   However, the onset of blooming is observed to be early in the recent years
 -   The Month of February and March is very critical for blooms, due to the withdrawal of convective mixing and initiation of stratification during the period
 -   As reflected in the changes in density, it is concluded that the early blooming is due to the early stratification
 :::
-:::
 
-## wavelet decomposs
+## wavelet decomposs of Pycnocline depth and chlorophyll(add color)
 
 ::: columns
 ::: {.column width="60%"}
@@ -798,33 +804,23 @@ Early occurrence of Phytoplankton blooms in NEAS ?
 :::
 
 ::: {.column width="40%"}
-::: r-fit-text
 ::: incremental
 -   The Wavelet decompositions suggest that pycnocline depth and surface chlorophyll have interactions
 -   The low frequency decompositions of pycnocline are well aligned with surface chlorophyll
 :::
 :::
 :::
-:::
 
-## wavelet decomposs
+## Wavelets are strongly aligned in D1 & D2
 
-::: columns
-::: {.column width="60%"}
 ![](wave_decompose_sig.png)
-:::
 
-::: {.column width="40%"}
-::: r-fit-text
 ::: incremental
 -   The wavelet decomposition in low frequencies (D7 and D8 waves) are strongly concurrent between the surface chl-a and pycnocline depth
 
 -   The periods seems to be frequent within a range of 128 & 256 days
 
 -   The changes in pycnocline are significant in NEAS because the nutrient -depleted surface waters enrich by pycnocline due to wind mixing
-:::
-:::
-:::
 :::
 
 ## 
@@ -839,19 +835,19 @@ Wavelet Coherence: **pycnocline depths** vs **surface chlorophyll**
 
 Wavelet Coherence: **pycnocline** vs **SCM**
 
-## Potential density anomalies over the decades
+## Potential density anomalies over the decades(change color)
 
 ::: r-stack
-![](pden1.png){.fragment}
+![](pden1.png){.fragment width="1000" height="500"}
 
-![](pden2.png){.fragment}
+![](pden2.png){.fragment width="1000" height="500"}
 
-![](pden3.png){.fragment}
+![](pden3.png){.fragment width="1000" height="500"}
 
-![](pden4.png){.fragment}
+![](pden4.png){.fragment width="1000" height="500"}
 :::
 
-## 
+## potential density vs extreme events
 
 ```{r fig.align='center',out.width="100%"}
 library(ggplot2)
@@ -868,7 +864,11 @@ enso<- ggplot(Allyear_ano_pden_ts, aes(x = year, y = value,group=1)) +
 ggplotly(enso)
 ```
 
+Potential density Anomaly- $kg/m^3$
+
 ## 
+
+How SCM depth is controlled by SST-PDEN ratio
 
 ```{r}
 sourcedata<- read.csv("sstpden.csv")
@@ -884,7 +884,7 @@ ggplotly(pdensst)
 ## 
 
 ::: columns
-::: {.column width="60%"}
+::: {.column width="70%"}
 ```{r out.width="80%"}
 library(raster)
 library(threejs)
@@ -906,11 +906,11 @@ bisi_dat<- rasterToPoints(bisi)
 ![](bisi_scale.png)
 :::
 
-::: {.column width="40%"}
-::: r-fit-text
+::: {.column width="30%"}
 ::: incremental
--   The SST-PDEN ratio relationship with SCM is utlized to derive Biologically Influenced Stratification Index (BISI) \_ BISI describes the probable SCM in locations, where the SST is increasing and density decreases
-:::
+-   The SST-PDEN ratio relationship with SCM is utlized to derive Biologically Influenced Stratification Index (BISI)
+
+-   BISI describes the probable SCM in locations, where the SST is increasing and density decreases
 :::
 :::
 :::
@@ -1025,82 +1025,58 @@ fig
 
 ![](chaos_sig.png)
 
-## Summary and Conclusion {background-color="aquamarine"}
+## Summary and Conclusion {background-color="aquamarine" font-size="3em"}
 
 ::: {.fragment .fade-up}
-::: r-fit-text
 -   Interactions of phytoplankton with prevailing stratified fluid systems are highly reflected in the vertical distribution of chlorophyll profiles
 :::
-:::
 
 ::: {.fragment .fade-up}
-::: r-fit-text
 -   The insights reveals that the warming have immediate impacts in phytoplankton groups, by increasing its settling velocity resulting in subsurface aggregation
 :::
-:::
 
 ::: {.fragment .fade-up}
-::: r-fit-text
 -   Settling in the subsurface leads to increase the plasticity among phytoplankton which thrive in low light
 :::
-:::
 
 ::: {.fragment .fade-up}
-::: r-fit-text
 -   As global warming is an emerging threat, the findings will direct towards low light abundance as a critical wayout defining the adaptation strategies of the phytoplankton community
-:::
 :::
 
 ## Summary and Conclusion {background-color="turquoise"}
 
 ::: {.fragment .fade-up}
-::: r-fit-text
 -   The subsurface is comparatively suitable in the warming scenario, than surface, in terms of stability, nutrient availability and optimum temperature
 :::
-:::
 
 ::: {.fragment .fade-up}
-::: r-fit-text
 -   The warming scenarios have varying influences on local and global scales, and the gradient in surface density is getting decreased over the period due to stratification
 :::
+
+::: {.fragment .fade-up}
+-   Stratification results in strengthening of new productive subsurface, the optimum layer for several phytoplankton species, and maintain as a prominent subsurface chlorophyll maxima (SCM)
 :::
 
 ::: {.fragment .fade-up}
-::: r-fit-text
--   Stratification results in strengthening of new productive subsurface layer, which is optimum for several phytoplankton species, and maintain as a prominent subsurface chlorophyll maxima (SCM)
-:::
-:::
-
-::: {.fragment .fade-up}
-::: r-fit-text
--   Stratification in oceanic systems with proximity to landlocked areas are favourable for mixotrophic Noctiluca (blooming), which have been rapid since 2000
-:::
+-   Stratification in oceanic systems with proximity to landlocked areas are favourable for mixotrophic *Noctiluca* (blooming), which have been regular since 2000
 :::
 
 ## Summary and Conclusion {background-color="salmon"}
 
 ::: {.fragment .fade-up}
-::: r-fit-text
 -   Seasonal stratifications is observed to be early in the recent years, resulting in bloom formation in advance especially in landlocked areas, available with nutrients.
 :::
-:::
 
 ::: {.fragment .fade-up}
-::: r-fit-text
 -   Both fluid and phytoplankton innate mechanisms (motility) associated with complex ecosystem interactions create chaos, and so is difficult to forecast the submerged chlorophyll.
 :::
+
+::: {.fragment .fade-up}
+-   Estimates of primary production is gives lower values without the submerged chlorophylls
 :::
 
 ::: {.fragment .fade-up}
-::: r-fit-text
--   Estimates of primary production is uncertain without considering the submerged chlorophylls
-:::
-:::
-
-::: {.fragment .fade-up}
-::: r-fit-text
--   Deep learning algorithms such as Artificial Neural Nets are really useful to predict the chlorophyll profile
-:::
+-   Deep learning algorithms such as Artificial Neural Nets can be best utilized in predicting chlorophyll profile
 :::
 
 ## Major publications from the thesis {data-background-image="pub1.png"}
@@ -1230,16 +1206,11 @@ Seasonal Dynamics of Major Phytoplankton Functional Types in the Coastal Waters 
 ::: columns
 ::: {.column width="60%"}
 ![](set_anime.gif)
-
 :::
 
 ::: {.column width="40%"}
-
-::: {.r-fit-text}
-
-Thank you 
-
+::: r-fit-text
+Thank you
 :::
 :::
 :::
-
