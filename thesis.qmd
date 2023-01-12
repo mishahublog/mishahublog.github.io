@@ -112,10 +112,17 @@ chapter 1
 ::: incremental
 Critical Questions to address
 
--   What are the physical factors influence column productivity and subsurface?
--   Which is more in control and immediate effect on the column productivity system of NEAS?
--   How climate change and global warming affect the NEAS system as well as the global?
--   Constraints and advances in predicting subsurface chlorophyll
+-   What are the biophysical interactions of phytoplankton and fluid dynamics in SCM layers ?
+
+-   How to monitor the extent of distribution of Chl-*a* with changes in potential density on synoptic levels
+
+-   How to describe bloom dynamics in physical terms?
+
+-   How to track the changes in frequency domains of Chl-*a* in response to climate change
+
+-   How to assess the forecasting effects and challenges in predicting
+
+    Chl-*a* dynamics
 :::
 
 ::: footer
@@ -149,6 +156,11 @@ chapter 1
 ::: footer
 chapter 1
 :::
+
+## Typical chlorophyll profiles
+
+![](typical_chl.png)
+
 
 ## Why SCM is Important ?
 
@@ -537,7 +549,22 @@ Four species were more focused due to its abundance in this location concurrent 
 
 ## A simple experiment
 
+::: columns
+::: {.column width="50%"}
 ![](set_video.mov){width="600" height="500"}
+:::
+
+::: {.column width="50%"}
+
+::: incremental
+- This experiment is analogous to the sinking phytoplankton groups 
+- The two distinct density layers created by oil and water
+- The sinking of mustard seeds are very related to the sinking of green _Noctiluca_ 
+- The same mechanism can be expected in the NEAS
+
+:::
+:::
+:::
 
 ##  {auto-animate="true" data-background-image="chapter4.png"}
 
@@ -930,6 +957,11 @@ Limitations, possibilities and Applications
 ::: columns
 ::: {.column width="50%"}
 ![](model_simu.png)
+$$
+Chl_{max} = \frac{\sigma \times (-1.23)+ par \times (-0.0044) + 30.41 }{{{
+{[{\frac{-D-D_{max}}{Chl_{spd}}}]}^2
+}}}
+$$
 :::
 
 ::: {.column width="50%"}
