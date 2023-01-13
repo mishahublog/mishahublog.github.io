@@ -1,10 +1,7 @@
 ---
-title: "Biophysical coupling: Chlorophyll-a dynamics of the North Eastern Arabian Sea in a warming scenario"
-subtitle: Midhun shah Hussain \n
-          Senior Research Fellow
-description: testing 
+title: "."
 title-slide-attributes:
-  data-background-image: ""
+  data-background-image: "title_slide.png"
 format: 
   revealjs:
       chalkboard: TRUE
@@ -20,10 +17,11 @@ format:
 ::: columns
 ::: {.column width="40%"}
 ::: incremental
--   Surface chlorophyll has declining phase with increasing warming scenarios and several controversial results have also come in this field
--   Recurring blooms in North eastern Arabian Sea associated with subsurface - chlorophyll maxima(SCM)
--   Extension in stratifications in NEAS & global
--   Satellites shown underestimates in column primary productions
+
+- Surface chlorophyll has been in decline with increasing warming scenarios, and several - controversial results have also come in this field
+- Recurring blooms in the North Eastern Arabian Sea and  associated with subsurface - chlorophyll maxima(SCM)
+- Stratifications in NEAS are strengthening in NEAS as well as globally
+- Remote Sensing data underestimates column primary production
 :::
 :::
 
@@ -161,7 +159,6 @@ chapter 1
 
 ![](typical_chl.png)
 
-
 ## Why SCM is Important ?
 
 ::: columns
@@ -171,7 +168,8 @@ chapter 1
 -   Have significant contribution in PP
 -   But mostly it is underestimated by currently using PP models.
 -   Exhibit strong seasonality
--   A probe to understand the climate change impacts
+-   A Better indicator of climate change
+
 :::
 :::
 
@@ -203,13 +201,19 @@ chapter 1
 
 ##  {auto-animate="true" data-background-image="observation_titile.png"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 Study location, Algorithms and sampling
+:::
 
 ##  {auto-animate="true" data-background-image="observation_titile.png"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 **Observation & Methods**
+:::
 
+::: {style="font-size: 3em"}
 Study location, Algorithms and sampling
+:::
 
 ## Data Sources {data-background-image="datasources_bg.png"}
 
@@ -370,13 +374,19 @@ An inverted gaussian can easily represent the SCM
 
 ##  {auto-animate="true" data-background-image="chapter3.png"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 Understanding Process and Interactions
+:::
 
 ##  {auto-animate="true" data-background-image="chapter3.png"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 **Phytoplankton and Fluid dynamics**
+:::
 
+::: {style="font-size: 3em"}
 Understanding Process and Interactions
+:::
 
 ## 
 
@@ -555,26 +565,30 @@ Four species were more focused due to its abundance in this location concurrent 
 :::
 
 ::: {.column width="50%"}
-
 ::: incremental
-- This experiment is analogous to the sinking phytoplankton groups 
-- The two distinct density layers created by oil and water
-- The sinking of mustard seeds are very related to the sinking of green _Noctiluca_ 
-- The same mechanism can be expected in the NEAS
-
+-   This experiment is analogous to the sinking phytoplankton groups
+-   The two distinct density layers created by oil and water
+-   The sinking of mustard seeds are very related to the sinking of green *Noctiluca*
+-   The same mechanism can be expected in the NEAS
 :::
 :::
 :::
 
 ##  {auto-animate="true" data-background-image="chapter4.png"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 Physical processes associated with Green Noctiluca Blooms
+:::
 
 ##  {auto-animate="true" data-background-image="chapter4.png"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 **Surface-Subsurface oscillations of Chlorophyll-*a***
+:::
 
+::: {style="font-size: 3em"}
 Physical processes associated with Green Noctiluca Blooms
+:::
 
 ## Changes in Bloom dynamics
 
@@ -595,19 +609,19 @@ Physical processes associated with Green Noctiluca Blooms
 
 ## How blooms changes in NEAS
 
-![](bloom_map2.png){.absolute top="100" left="50"}
+![](bloom_map2.png){.absolute top="80" left="50"}
 
 ## When it blooms
 
-![](bloom_map3.png){.absolute top="100" left="50"}
+![](bloom_map3.png){.absolute top="80" left="50"}
 
 ## Influence of extreme events
 
-![](bloom_map4.png){.absolute top="100" left="50"}
+![](bloom_map4.png){.absolute top="80" left="50"}
 
-## But it is entirly absent in early years
+## But it is entirely absent in early years
 
-![](bloom_map5.png){.absolute top="100" left="50"}
+![](bloom_map5.png){.absolute top="80" left="50"}
 
 ## The role of surface currents
 
@@ -690,15 +704,22 @@ $$
 :::
 :::
 
-##  {auto-animate="true" data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="climate.png"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 Global density changes, settling velocities and time shifts in blooms
+:::
 
-##  {auto-animate="true" data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="climate.png"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 **Phytoplankton response to climate change**
+:::
 
+::: {style="font-size: 3em"}
 Global density changes, settling velocities and time shifts in blooms
+:::
+
 
 ## SST variations in decadel scale over four weeks of March
 
@@ -823,6 +844,10 @@ ggplotly(ts_neas)
 -   As reflected in the changes in density, it is concluded that the early blooming is due to the early stratification
 :::
 
+## Surface chlorophyll relation with pycnocline upper layers
+
+![](yearly_pden_surf.png)
+
 ## wavelet decomposs of Pycnocline depth and chlorophyll(add color)
 
 ::: columns
@@ -835,6 +860,7 @@ ggplotly(ts_neas)
 -   The Wavelet decompositions suggest that pycnocline depth and surface chlorophyll have interactions
 -   The low frequency decompositions of pycnocline are well aligned with surface chlorophyll
 :::
+![](wave_decomposs_legend.png){width="300" height="150"}
 :::
 :::
 
@@ -871,7 +897,6 @@ Wavelet Coherence: **pycnocline** vs **SCM**
 
 ![](pden3.png){.fragment width="1000" height="500"}
 
-![](pden4.png){.fragment width="1000" height="500"}
 :::
 
 ## potential density vs extreme events
@@ -908,7 +933,7 @@ ggplotly(pdensst)
 
 ```
 
-## 
+## Application of SST-PDEN relations
 
 ::: columns
 ::: {.column width="70%"}
@@ -942,22 +967,27 @@ bisi_dat<- rasterToPoints(bisi)
 :::
 :::
 
-##  {auto-animate="true" data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="forecast.png"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 Limitations, possibilities and Applications
+:::
 
-##  {auto-animate="true" data-background-image="observation_titile.png"}
+##  {auto-animate="true" data-background-image="forecast.png"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 **Forecasting submerged Chlorophyll with Machine Learning**
+:::
 
+::: {style="font-size: 3em"}
 Limitations, possibilities and Applications
+:::
 
-## 
+## Model simulations & sensitivity
 
 ::: columns
 ::: {.column width="50%"}
-![](model_simu.png)
-$$
+![](model_simu.png) $$
 Chl_{max} = \frac{\sigma \times (-1.23)+ par \times (-0.0044) + 30.41 }{{{
 {[{\frac{-D-D_{max}}{Chl_{spd}}}]}^2
 }}}
@@ -969,7 +999,7 @@ $$
 :::
 :::
 
-## 
+## Positive changes in chlorophyll by physical state of water
 
 ::: columns
 ::: {.column width="50%"}
@@ -988,10 +1018,15 @@ ggplotly(chlphys)
 :::
 
 ::: {.column width="50%"}
+::: incremental
+- Positive changes in density of water strongly associated with productivity in NEAS
+- This density changes are mostly considered as a cue of nutrient rich water
+- But the advances in density can also considered as a buoyancy support for phytoplankton at surface
+:::
 :::
 :::
 
-## 
+## Changes on physical state is visible throughout the year
 
 ::: columns
 ::: {.column width="50%"}
@@ -1003,15 +1038,15 @@ ggplotly(chlphys)
 :::
 :::
 
-## 
+## Neural Nets for deep learning and prediction
 
 ![](neuralnet.png){.r-stretch}
 
-## 
+## Efficiency of Neural Nets
 
 ![](neuro_obs.png){.r-stretch}
 
-## 
+## Chlorophyll dynamics is Stochastic or Chaotic ?
 
 ::: columns
 ::: {.column width="50%"}
@@ -1047,15 +1082,67 @@ fig
 
 ## 
 
+::: r-fit-text
+Chaos & Chl-*a*
+:::
+
+In a chaotic system an initial condition always leads to the same final state, following a fixed rule, while in a stochastic system, an initial condition leads to a variety of possible final states
+
+Nature of chaotic dynamics
+
+-   it must be sensitive to initial conditions,
+-   it must be topologically transitive,
+-   it must have dense periodic orbits.
+
+## Chaos Test
+
+![](chaos_types.png)
+
+-   In the regular case (periodic or quasiperiodic dynamics) the trajectories for the system are typically bounded
+
+-   In the chaotic case the trajectories are typically behave approximately like a two-dimensional Brownian motion with zero drift and hence evolve diffusively
+
+## The Biological variables seems chaotic
+
+::: columns
+::: {.column width="50%"}
 ![](chaos_chl.png)
+:::
+
+::: {.column width="50%"}
+-   The biological variables such as chlorophyll and oxygen are observed to be chaotic
+-   Chaotic variables are unpredictable with regular statistical approaches
+-   But can be traceable with adequate long range datasets
+:::
+:::
 
 ## 
 
+::: columns
+::: {.column width="50%"}
 ![](chaos_temp.png)
+:::
+
+::: {.column width="50%"}
+- The SST in SIM have slipping dynamics from regular to chaos
+- The SST in WM is on the track
+- The salinity data seems very stable on SIM and WM
+:::
+:::
 
 ## 
 
+::: columns
+::: {.column width="50%"}
 ![](chaos_sig.png)
+:::
+
+::: {.column width="50%"}
+- The density changes are a function of sst and salinity
+- The slippery effects on SST also reflected in the density at SIM
+:::
+:::
+
 
 ## Summary and Conclusion {background-color="aquamarine" font-size="3em"}
 
@@ -1186,13 +1273,19 @@ Ponman: An R Package For Bio-Argo Data Analysis *Midhun Shah Hussain, Smitha B. 
 
 ##  {auto-animate="true"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 Collaborations
+:::
 
 ##  {auto-animate="true"}
 
+::: {style="margin-top: 100px;font-size: 3em"}
 Publications from
+:::
 
+::: {style="font-size: 3em"}
 Collaborations
+:::
 
 ##  {data-background-image="col1.png"}
 
