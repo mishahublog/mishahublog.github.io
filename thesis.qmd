@@ -17,11 +17,10 @@ format:
 ::: columns
 ::: {.column width="40%"}
 ::: incremental
-
-- Surface chlorophyll has been in decline with increasing warming scenarios, and several - controversial results have also come in this field
-- Recurring blooms in the North Eastern Arabian Sea and  associated with subsurface - chlorophyll maxima(SCM)
-- Stratifications in NEAS are strengthening in NEAS as well as globally
-- Remote Sensing data underestimates column primary production
+-   Surface chlorophyll has been in decline with increasing warming scenarios, and several - controversial results have also come in this field
+-   Recurring blooms in the North Eastern Arabian Sea and associated with subsurface - chlorophyll maxima(SCM)
+-   Stratifications in NEAS are strengthening in NEAS as well as globally
+-   Remote Sensing data underestimates column primary production
 :::
 :::
 
@@ -169,7 +168,6 @@ chapter 1
 -   But mostly it is underestimated by currently using PP models.
 -   Exhibit strong seasonality
 -   A Better indicator of climate change
-
 :::
 :::
 
@@ -233,15 +231,33 @@ Study location, Algorithms and sampling
 :::
 :::
 
+::: footer
+chapter 2
+:::
+
 ## 
 
 ![](bioargo1.png){fig-align="left"}
+
+::: footer
+chapter 2
+:::
 
 ## 
 
 ![](bioargo2.png){fig-align="centre"}
 
+::: footer
+chapter 2
+:::
+
+
 ##  {data-background-image="cruisectd1.png" background-size="1390px"}
+
+::: footer
+chapter 2
+:::
+
 
 ##  {data-background-image="cruisectd2.png" background-size="1390px"}
 
@@ -255,6 +271,10 @@ CTD spec & Probes
 -   SBE (Model 11 PLUS, Sea-Bird Inc.) in 1 m bin intervals.
 -   The CTD system is equipped with auxiliary sensors of dissolved oxygen, fluorescence and photosynthetic active radiation (PAR)
 :::
+:::
+
+::: footer
+chapter 2
 :::
 
 ## Study Location
@@ -273,6 +293,11 @@ CTD spec & Probes
 :::
 :::
 
+::: footer
+chapter 2
+:::
+
+
 ## Algorithms & programing {data-background-image="packagesused.png" background-size="1000px"}
 
 ::: columns
@@ -288,6 +313,11 @@ All the Algorithms, Analytics, Automations , Empirical modeling , spatial maps, 
 :::
 :::
 
+::: footer
+chapter 2
+:::
+
+
 ## Clustering and sorting SCMs according to seasons
 
 ::: r-stack
@@ -301,6 +331,11 @@ All the Algorithms, Analytics, Automations , Empirical modeling , spatial maps, 
 
 ![](cluster5.png){.fragment width="400" height="400"}
 :::
+
+::: footer
+chapter 2
+:::
+
 
 ## Fitting with Non-Linear Gaussian curves
 
@@ -334,19 +369,38 @@ ggplotly(f)
 :::
 :::
 
+::: footer
+chapter 2
+:::
+
 ## Fitting with Non-Linear Gaussian curves
 
 ![](profiles1.png){fig-align="center"}
 
+::: footer
+chapter 2
+:::
+
+
 ## Fitting with Non-Linear Gaussian curves
 
 ![](profilesfit1.png){fig-align="center"}
+
+::: footer
+chapter 2
+:::
+
 
 ## 
 
 ![](schematicscm_gauss.png){.r-stretch}
 
 An inverted gaussian can easily represent the SCM
+
+::: footer
+chapter 2
+:::
+
 
 ## Rasterizing the fit values
 
@@ -720,7 +774,6 @@ Global density changes, settling velocities and time shifts in blooms
 Global density changes, settling velocities and time shifts in blooms
 :::
 
-
 ## SST variations in decadel scale over four weeks of March
 
 ```{r, out.width="100%",out.height="100%"}
@@ -860,6 +913,7 @@ ggplotly(ts_neas)
 -   The Wavelet decompositions suggest that pycnocline depth and surface chlorophyll have interactions
 -   The low frequency decompositions of pycnocline are well aligned with surface chlorophyll
 :::
+
 ![](wave_decomposs_legend.png){width="300" height="150"}
 :::
 :::
@@ -896,7 +950,6 @@ Wavelet Coherence: **pycnocline** vs **SCM**
 ![](pden2.png){.fragment width="1000" height="500"}
 
 ![](pden3.png){.fragment width="1000" height="500"}
-
 :::
 
 ## potential density vs extreme events
@@ -1019,9 +1072,9 @@ ggplotly(chlphys)
 
 ::: {.column width="50%"}
 ::: incremental
-- Positive changes in density of water strongly associated with productivity in NEAS
-- This density changes are mostly considered as a cue of nutrient rich water
-- But the advances in density can also considered as a buoyancy support for phytoplankton at surface
+-   Positive changes in density of water strongly associated with productivity in NEAS
+-   This density changes are mostly considered as a cue of nutrient rich water
+-   But the advances in density can also considered as a buoyancy support for phytoplankton at surface
 :::
 :::
 :::
@@ -1124,9 +1177,9 @@ Nature of chaotic dynamics
 :::
 
 ::: {.column width="50%"}
-- The SST in SIM have slipping dynamics from regular to chaos
-- The SST in WM is on the track
-- The salinity data seems very stable on SIM and WM
+-   The SST in SIM have slipping dynamics from regular to chaos
+-   The SST in WM is on the track
+-   The salinity data seems very stable on SIM and WM
 :::
 :::
 
@@ -1138,11 +1191,10 @@ Nature of chaotic dynamics
 :::
 
 ::: {.column width="50%"}
-- The density changes are a function of sst and salinity
-- The slippery effects on SST also reflected in the density at SIM
+-   The density changes are a function of sst and salinity
+-   The slippery effects on SST also reflected in the density at SIM
 :::
 :::
-
 
 ## Summary and Conclusion {background-color="aquamarine" font-size="3em"}
 
@@ -1337,5 +1389,6 @@ Seasonal Dynamics of Major Phytoplankton Functional Types in the Coastal Waters 
 ::: r-fit-text
 Thank you
 :::
+![](thankyou_links.png)
 :::
 :::
